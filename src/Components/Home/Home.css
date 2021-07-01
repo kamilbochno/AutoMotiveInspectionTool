@@ -1,0 +1,25 @@
+.Navigation {
+    background-color: lightgray;
+    margin: 0 auto;
+    height: 100px;
+    width: 1120px;
+    border: 1px solid black;
+    
+}
+
+.Links {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 280px;
+    
+}
+
+.Welcome {
+    background-color: #ededed;
+    margin: 0 auto;
+    margin-top: -23px;
+    height: 620px;
+    border: 1px solid black;
+    
+}
+
