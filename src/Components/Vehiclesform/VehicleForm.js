@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Form } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
 
 import styles from './VehicleForm.css';
@@ -11,7 +11,7 @@ class VehicleForm extends Component {
     }
 
     returnStateObject() {
-        if (this.props.currentIndex == -1)
+        if (this.props.currentIndex === -1)
             return {
                 id: '',
                 name: '',
@@ -25,7 +25,7 @@ class VehicleForm extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.currentIndex != this.props.currentIndex || prevProps.list != this.props.list) {
+        if (prevProps.currentIndex !== this.props.currentIndex || prevProps.list !== this.props.list) {
             this.setState({ ...this.returnStateObject() })
             console.log(prevProps, this.props)
         }
@@ -45,20 +45,86 @@ class VehicleForm extends Component {
     render() {
         return (
             <div className="main-form">
-            <form onSubmit={this.handleSubmit} autoComplete="off">
+            <Form onSubmit={this.handleSubmit} autoComplete="off">
+            <span className="close-btn"><a href="/">x</a></span>
+            <h4 className="title">Fill inputs and submit to add new vehicle</h4>
                 <div className="inputs">
-                <input name="id" placeholder="Enter id" onChange={this.handleInputChange} value={this.state.id} /><br />
-                <input name="name" placeholder="Enter name of vehicle" onChange={this.handleInputChange} value={this.state.name} /><br />
-                <input name="model" placeholder="Enter model of vehicle" onChange={this.handleInputChange} value={this.state.model} /><br />
-                <input name="year" placeholder="Enter year of production" onChange={this.handleInputChange} value={this.state.year} /><br />
-                <input name="color" placeholder="Enter color of vehicle" onChange={this.handleInputChange} value={this.state.color} /><br />
-                <input name="price" placeholder="Enter price of vehicle" onChange={this.handleInputChange} value={this.state.price} /><br />
-                
+                <Form.Group controlId="id">
+                    <Form.Label>Id: </Form.Label>
+                    <Form.Control
+                        className="input-control"
+                        type="number"
+                        name="id"
+                        value={this.state.id}
+                        placeholder="Enter id"
+                        onChange={this.handleInputChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="name">
+                    <Form.Label>Name: </Form.Label>
+                    <Form.Control
+                        className="input-control"
+                        type="text"
+                        name="name"
+                        value={this.state.name}
+                        placeholder="Enter name of vehicle"
+                        onChange={this.handleInputChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="model">
+                    <Form.Label>Model: </Form.Label>
+                    <Form.Control
+                        className="input-control"
+                        type="text"
+                        name="model"
+                        value={this.state.model}
+                        placeholder="Enter model of vehicle"
+                        onChange={this.handleInputChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="year">
+                    <Form.Label>Year: </Form.Label>
+                    <Form.Control
+                        className="input-control"
+                        type="number"
+                        name="year"
+                        value={this.state.year}
+                        placeholder="Enter year of production"
+                        onChange={this.handleInputChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="color">
+                    <Form.Label>Color: </Form.Label>
+                    <Form.Control
+                        className="input-control"
+                        type="text"
+                        name="color"
+                        value={this.state.color}
+                        placeholder="Enter color of vehicle"
+                        onChange={this.handleInputChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="price">
+                    <Form.Label>Price: </Form.Label>
+                    <Form.Control
+                        className="input-control"
+                        type="number"
+                        name="price"
+                        value={this.state.price}
+                        placeholder="Enter price of vehicle"
+                        onChange={this.handleInputChange}
+                    />
+                </Form.Group>   
+                <Button variant="contained" color="primary" className="submit-btn" type="submit">
+                    Submit
+                </Button>            
                 </div>
-                <button type="submit">Submit</button>
-            </form>
-            </div>
-        )
+            
+                
+                
+                </Form>
+                </div>   
+        );
     }
 }
 

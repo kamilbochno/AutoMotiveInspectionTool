@@ -28,7 +28,7 @@ class VehicleList extends Component {
 
     onAddOrEdit = (data) => {
         let list = this.returnList()
-        if (this.state.currentIndex == -1)
+        if (this.state.currentIndex === -1)
             list.push(data)
         else
             list[this.state.currentIndex] = data
