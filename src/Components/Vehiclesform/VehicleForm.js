@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Form } from 'react-bootstrap';
-import Button from '@material-ui/core/Button';
+import { Form, Button } from 'react-bootstrap';
+
 
 import styles from './VehicleForm.css';
 
@@ -48,7 +48,7 @@ class VehicleForm extends Component {
             <div className="main-form">
             <Form onSubmit={this.handleSubmit} autoComplete="off">
             <span className="close-btn"><a href="/">x</a></span>
-            <h4 className="title">Fill inputs and submit to add new vehicle</h4>
+            <h5 className="title">Fill inputs and submit to add new vehicle</h5>
                 <div className="inputs">
                 <Form.Group controlId="id">
                     <Form.Label>Id: </Form.Label>
@@ -116,7 +116,7 @@ class VehicleForm extends Component {
                         onChange={this.handleInputChange}
                     />
                 </Form.Group>   
-                <Button variant="contained" color="primary" className="submit-btn" type="submit">
+                <Button color="primary" className="submit-btn" type="submit">
                     Submit
                 </Button>            
                 </div>

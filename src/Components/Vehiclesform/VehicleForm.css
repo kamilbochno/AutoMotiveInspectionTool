@@ -5,14 +5,14 @@
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 450px;
+    height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .inputs {
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -26,21 +26,17 @@
 
 .input-control {
    
-    margin-top: 5px;
+    
     display: block;
 }
 
-.submit-btn {
-    
-    
-    margin-top: 20px !important;
-}
+
 
 
 .title {
-    position:absolute;
+    position: absolute;
     margin-top: 5px;
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 .close-btn {
