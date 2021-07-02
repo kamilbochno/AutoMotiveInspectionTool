@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import { Form, Button } from 'react-bootstrap';
 
 import styles from './Registerform.css';
 
@@ -7,26 +7,28 @@ function Register() {
     return (
     <div className="Register">
         <span className="close-btn"><a href="/">x</a></span>
-        <form className="register-form" action="/">
+        <Form className="register-form">
          <h3>Sign up</h3>
-            <label>
-                Username:
-                <input type="text" name="username" placeholder="Enter username" />
-               
-            </label>
-            <label>
-                Password:
-                <input type="password" name="password" placeholder="Enter password" />
-            </label>
-            <label>
-                Confirm Password:
-                <input type="password" name="password" placeholder="Confirm password" />
-            </label>
-            <Button style={{ marginTop: "20px"}} href="/" variant="contained" color="primary">
+         <Form.Group controlId="username">
+                <Form.Label>Username: </Form.Label>
+                <Form.Control type="text" placeholder="Enter username" />
+                
+            </Form.Group>
+            <Form.Group controlId="password">
+                <Form.Label>Password: </Form.Label>
+                <Form.Control type="text" placeholder="Enter password" />
+                
+            </Form.Group>
+            <Form.Group controlId="password">
+                <Form.Label>Confirm password: </Form.Label>
+                <Form.Control type="text" placeholder="Enter password" />
+                
+            </Form.Group>
+            <Button color="primary" type="submit">
                Register
             </Button>
             <p>Already have an account? Login <a href="/Login">Here</a></p>
-        </form>
+        </Form>
     </div>
     );
 }
