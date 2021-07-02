@@ -1,7 +1,9 @@
+  
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
 
 import styles from './Home.css';
 
@@ -12,19 +14,23 @@ function Home() {
                 <Container maxwidth="sm">
                     <div className="Links">
                         <NavLink activeClassName="active" to="/">
-                            <Button variant="contained">Home</Button>
+                           
+                            <Button variant="contained" color="primary">Home</Button>
+                            
                         </NavLink>
                         <NavLink activeClassName="active" to="/Login">
-                            <Button variant="contained">Login</Button>
+                        
+                            <Button variant="contained" color="primary">Login</Button>
+                          
                         </NavLink>
                         <NavLink activeClassName="active" to="/Register">
-                            <Button variant="contained">Register</Button>
+                            <Button variant="contained" color="primary">Register</Button>
                         </NavLink>
                         <NavLink activeClassName="active" to="/Vehicles">
-                            <Button variant="contained">Vehicles</Button>
+                            <Button variant="contained" color="primary">Vehicles</Button>
                         </NavLink>
                         <NavLink activeClassName="active" to="/Addvehicle">
-                            <Button variant="contained">Add vehicle</Button>
+                            <Button variant="contained" color="primary">Add vehicle</Button>
                         </NavLink>
                     </div>
                 </Container>
