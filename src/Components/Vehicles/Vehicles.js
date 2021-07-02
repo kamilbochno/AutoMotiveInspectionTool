@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import VehicleForm from '../Vehiclesform/VehicleForm';
 
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import styles from './Vehicles.css';
 class VehicleList extends Component {
     state = {
@@ -72,8 +72,8 @@ class VehicleList extends Component {
                                         <td>{item.price}</td>
                                     </tr>
                                 </tbody>
-                                <th><button onClick={() => this.handleEdit(index)}>Edit</button></th>
-                                <th><button onClick={() => this.handleDelete(index)}>Delete</button></th>
+                                <th><Button onClick={() => this.handleEdit(index)}>Edit</Button></th>
+                                <th><Button onClick={() => this.handleDelete(index)}>Delete</Button></th>
                                 
                                 
                                 </Table>
