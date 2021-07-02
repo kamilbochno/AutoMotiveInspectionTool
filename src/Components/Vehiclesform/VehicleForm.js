@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
+import styles from './VehicleForm.css';
+
 const VehicleForm = (props) => {
     const [vehicle, setVehicle] = useState({
         id: props.vehicle ? props.vehicle.id : '',
@@ -39,7 +41,7 @@ const VehicleForm = (props) => {
             price,
             date: new Date()
         };
-        props.handleOnSubmit(vehicle);    
+    props.handleOnSubmit(vehicle);    
     } else {
         errorMsg = 'Please fill out all the fields.';
     }
@@ -77,8 +79,9 @@ const VehicleForm = (props) => {
         <div className="main-form">
             {errorMsg && <p className="errorMsg">{errorMsg}</p>}
             <Form onSubmit={handleOnSubmit}>
+                <div className="inputs">
                 <Form.Group controlId="id">
-                    <Form.Label>Id:</Form.Label>
+                    <Form.Label>Id: </Form.Label>
                     <Form.Control
                         className="input-control"
                         type="number"
@@ -89,7 +92,7 @@ const VehicleForm = (props) => {
                     />
                 </Form.Group>
                 <Form.Group controlId="name">
-                    <Form.Label>Name:</Form.Label>
+                    <Form.Label>Name: </Form.Label>
                     <Form.Control
                         className="input-control"
                         type="text"
@@ -100,7 +103,7 @@ const VehicleForm = (props) => {
                     />
                 </Form.Group>
                 <Form.Group controlId="model">
-                    <Form.Label>Model:</Form.Label>
+                    <Form.Label>Model: </Form.Label>
                     <Form.Control
                         className="input-control"
                         type="text"
@@ -111,7 +114,7 @@ const VehicleForm = (props) => {
                     />
                 </Form.Group>
                 <Form.Group controlId="year">
-                    <Form.Label>Year:</Form.Label>
+                    <Form.Label>Year: </Form.Label>
                     <Form.Control
                         className="input-control"
                         type="number"
@@ -122,7 +125,7 @@ const VehicleForm = (props) => {
                     />
                 </Form.Group>
                 <Form.Group controlId="color">
-                    <Form.Label>Color:</Form.Label>
+                    <Form.Label>Color: </Form.Label>
                     <Form.Control
                         className="input-control"
                         type="text"
@@ -133,7 +136,7 @@ const VehicleForm = (props) => {
                     />
                 </Form.Group>
                 <Form.Group controlId="price">
-                    <Form.Label>Price:</Form.Label>
+                    <Form.Label>Price: </Form.Label>
                     <Form.Control
                         className="input-control"
                         type="number"
@@ -146,10 +149,12 @@ const VehicleForm = (props) => {
                 <Button variant="primary" type="submit" className="submit-btn">
                     Submit
                 </Button>
+                </div>
             </Form>
+            
         </div>
       );
-    }
+    };
 
 export default VehicleForm;
     

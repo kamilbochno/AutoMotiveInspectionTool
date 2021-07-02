@@ -1,5 +1,5 @@
 import React from 'react';
-import VehicleForm from '../Vehiclesform/VehicleForm';
+import VehicleForm from './VehicleForm';
 
 const AddVehicle = () => {
     const handleOnSubmit = (vehicle) => {
