@@ -15,22 +15,22 @@ function Home() {
                     <div className="Links">
                         <NavLink activeClassName="active" to="/">
                            
-                            <Button variant="contained" color="primary">Home</Button>
+                            <Button className="btn-link" variant="contained" color="primary">Home</Button>
                             
                         </NavLink>
                         <NavLink activeClassName="active" to="/Login">
                         
-                            <Button variant="contained" color="primary">Login</Button>
+                            <Button className="btn-link" variant="contained" color="primary">Login</Button>
                           
                         </NavLink>
                         <NavLink activeClassName="active" to="/Register">
-                            <Button variant="contained" color="primary">Register</Button>
+                            <Button className="btn-link" variant="contained" color="primary">Register</Button>
                         </NavLink>
                         <NavLink activeClassName="active" to="/Vehicles">
-                            <Button variant="contained" color="primary">Vehicles</Button>
+                            <Button className="btn-link" variant="contained" color="primary">Vehicles</Button>
                         </NavLink>
                         <NavLink activeClassName="active" to="/Addvehicle">
-                            <Button variant="contained" color="primary">Add vehicle</Button>
+                            <Button className="btn-link" variant="contained" color="primary">Add vehicle</Button>
                         </NavLink>
                     </div>
                 </Container>

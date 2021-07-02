@@ -1,3 +1,7 @@
+.Home {
+    
+}
+
 .Navigation {
     background-color: lightgray;
     margin: 0 auto;
@@ -16,13 +20,15 @@
 }
 
 .Welcome {
+    
     background-color: #ededed;
     margin: 0 auto;
     margin-top: -23px;
-    height: 620px;
+    height: 1300px;
     border: 1px solid black;
     
 }
 
-
-
+.btn-link {
+    margin-right: 20px !important;
+}
