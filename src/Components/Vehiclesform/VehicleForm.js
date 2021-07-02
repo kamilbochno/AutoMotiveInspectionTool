@@ -40,6 +40,7 @@ class VehicleForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.onAddOrEdit(this.state)
+        
     }
 
     render() {

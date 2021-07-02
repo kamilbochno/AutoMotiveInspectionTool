@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import VehicleForm from '../Vehiclesform/VehicleForm';
 
+import { Table } from 'react-bootstrap';
+import styles from './Vehicles.css';
 class VehicleList extends Component {
     state = {
         currentIndex: -1,
@@ -39,30 +41,48 @@ class VehicleList extends Component {
 
     render() {
         return (
+            
             <div>
                 <VehicleForm
                     currentIndex={this.state.currentIndex}
                     list={this.state.list}
                     onAddOrEdit={this.onAddOrEdit}
                 />
-                <hr />
-                <table>
-                    <tbody>
+         <div className="vehicle-list"> 
+             <h3>List of vehicles</h3>         
                         {this.state.list.map((item, index) => {
-                            return <tr key={index}>
-                                <td>id: {item.id}</td>
-                                <td>name: {item.name}</td>
-                                <td>model: {item.model}</td>
-                                <td>year: {item.year}</td>
-                                <td>color: {item.color}</td>
-                                <td>price: {item.price}</td>
-                                <td><button onClick={() => this.handleEdit(index)}>Edit</button></td>
-                                <td><button onClick={() => this.handleDelete(index)}>Delete</button></td>
-                            </tr>
+                            return <Table responsive striped bordered hover horizontal key={index}>
+                                <thead>
+                                <tr>
+                                <th className="table-items">id </th>
+                                <th className="table-items">name </th>
+                                <th className="table-items">model </th>
+                                <th className="table-items">year </th>
+                                <th className="table-items">color </th>
+                                <th className="table-items">price </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{item.id}</td>
+                                        <td>{item.name}</td>
+                                        <td>{item.model}</td>
+                                        <td>{item.year}</td>
+                                        <td>{item.color}</td>
+                                        <td>{item.price}</td>
+                                    </tr>
+                                </tbody>
+                                <th><button onClick={() => this.handleEdit(index)}>Edit</button></th>
+                                <th><button onClick={() => this.handleDelete(index)}>Delete</button></th>
+                                
+                                
+                                </Table>
+                            
                         })}
-                    </tbody>
-                </table>
-            </div>
+                    
+                </div>       
+          </div>      
+            
         )
     }
 }

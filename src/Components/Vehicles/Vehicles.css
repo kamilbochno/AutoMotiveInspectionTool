@@ -1,0 +1,12 @@
+.vehicle-list {
+    position: absolute;
+    height: auto;
+    width: 450px;
+    margin-top: -500px;
+    margin-left: 20px;
+    background-color: white;
+}
+
+.table-items {
+    width: 90px;
+}
