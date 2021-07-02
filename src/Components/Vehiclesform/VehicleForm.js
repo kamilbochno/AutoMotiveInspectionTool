@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from './VehicleForm.css';
@@ -79,6 +80,8 @@ const VehicleForm = (props) => {
         <div className="main-form">
             {errorMsg && <p className="errorMsg">{errorMsg}</p>}
             <Form onSubmit={handleOnSubmit}>
+                <span className="close-btn"><a href="/">x</a></span>
+                <h4 className="title">Fill inputs and submit to add new vehicle</h4>
                 <div className="inputs">
                 <Form.Group controlId="id">
                     <Form.Label>Id: </Form.Label>
@@ -146,7 +149,7 @@ const VehicleForm = (props) => {
                         onChange={handleInputChange}
                     />
                 </Form.Group>
-                <Button variant="primary" type="submit" className="submit-btn">
+                <Button variant="contained" color="primary" type="submit" className="submit-btn">
                     Submit
                 </Button>
                 </div>
