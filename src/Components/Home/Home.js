@@ -29,9 +29,7 @@ function Home() {
                         <NavLink activeClassName="active" to="/Vehicles">
                             <Button className="btn-link" variant="contained" color="primary">Vehicles</Button>
                         </NavLink>
-                        <NavLink activeClassName="active" to="/Addvehicle">
-                            <Button className="btn-link" variant="contained" color="primary">Add vehicle</Button>
-                        </NavLink>
+                        
                     </div>
                 </Container>
             </div>
