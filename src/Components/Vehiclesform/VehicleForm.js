@@ -90,7 +90,7 @@ class VehicleForm extends Component {
                         type="number"
                         name="year"
                         value={this.state.year}
-                        placeholder="Enter year of production"
+                        placeholder="Year of production"
                         onChange={this.handleInputChange}
                     />
                 </Form.Group>
