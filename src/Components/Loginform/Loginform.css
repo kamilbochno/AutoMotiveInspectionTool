@@ -49,3 +49,13 @@
       margin-top: 20px;
  }
  
+ @media screen and (max-width: 430px) {
+  .Login {
+    width: 320px;
+  }
+  .sign-in {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 115px;
+  }
+}

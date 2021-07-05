@@ -37,3 +37,9 @@
   margin-top: 20px;
   
 }
+
+@media screen and (max-width: 430px) {
+  .Register {
+    width: 320px;
+  }
+}
