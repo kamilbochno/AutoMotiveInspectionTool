@@ -1,4 +1,4 @@
-  
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
@@ -28,6 +28,9 @@ function Home() {
                         </NavLink>
                         <NavLink activeClassName="active" to="/Vehicles">
                             <Button className="btn-link" variant="contained" color="primary">Vehicles</Button>
+                        </NavLink>
+                        <NavLink activeClassName="active" to="/Addvehicle">
+                            <Button className="btn-link" variant="contained" color="primary">Add vehicle</Button>
                         </NavLink>
                         
                     </div>
