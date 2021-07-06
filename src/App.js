@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Loginform/Loginform';
 import Register from './Components/Registerform/Registerform';
 import Vehicles from './Components/Vehicles/Vehicles';
+import Addvehicle from './Components/Vehiclesform/Addvehicle';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Route exact path="/Login" component={Login} />
     <Route exact path="/Register" component={Register} />
     <Route exact path="/Vehicles" component={Vehicles} />
+    <Route exact path="/Addvehicle" component={Addvehicle} />
     </div>
   );
 }

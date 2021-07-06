@@ -42,12 +42,7 @@ class VehicleList extends Component {
     render() {
         return (
             
-            <div>
-                <VehicleForm
-                    currentIndex={this.state.currentIndex}
-                    list={this.state.list}
-                    onAddOrEdit={this.onAddOrEdit}
-                />
+            
          <div className="vehicle-list"> 
              <h3>List of vehicles</h3>         
                         {this.state.list.map((item, index) => {
@@ -81,7 +76,7 @@ class VehicleList extends Component {
                         })}
                     
                 </div>       
-          </div>      
+               
             
         )
     }
