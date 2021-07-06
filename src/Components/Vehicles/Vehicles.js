@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import VehicleForm from '../Vehiclesform/VehicleForm';
-
+import { Router, Switch, Route } from 'react-router-dom';
 import { Table, Button } from 'react-bootstrap';
 import styles from './Vehicles.css';
 class VehicleList extends Component {
@@ -17,9 +17,14 @@ class VehicleList extends Component {
 
     handleEdit = (index) => {
         this.setState({
-            currentIndex: index
+            currentIndex: index          
+            
         })
+        
+        
     }
+
+    
 
     handleDelete = (index) => {
         let list = this.returnList()
@@ -37,13 +42,18 @@ class VehicleList extends Component {
         localStorage.setItem('vehicles', JSON.stringify(list))
         this.setState({ list, currentIndex: -1 })
     }
-
+     
 
     render() {
+        
+        
+        
         return (
             
             
+              
          <div className="vehicle-list"> 
+         <span className="close-btn"><a href="/">x</a></span>
              <h3>List of vehicles</h3>         
                         {this.state.list.map((item, index) => {
                             return <Table responsive striped bordered hover horizontal key={index}>
@@ -68,6 +78,7 @@ class VehicleList extends Component {
                                     </tr>
                                 </tbody>
                                 <th><Button onClick={() => this.handleEdit(index)}>Edit</Button></th>
+                                
                                 <th><Button onClick={() => this.handleDelete(index)}>Delete</Button></th>
                                 
                                 
@@ -75,7 +86,7 @@ class VehicleList extends Component {
                             
                         })}
                     
-                </div>       
+                    </div>    
                
             
         )

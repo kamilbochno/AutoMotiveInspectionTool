@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 
 import styles from './VehicleForm.css';
 
 class VehicleForm extends Component {
-
+    
     state = {
         ...this.returnStateObject()
     }
@@ -41,7 +41,10 @@ class VehicleForm extends Component {
         e.preventDefault()
         this.props.onAddOrEdit(this.state)
         
+        
     }
+
+    
 
     render() {
         return (
@@ -116,9 +119,16 @@ class VehicleForm extends Component {
                         onChange={this.handleInputChange}
                     />
                 </Form.Group>   
+                
+                
                 <Button color="primary" className="submit-btn" type="submit">
-                    Submit
-                </Button>            
+                     Submit
+                </Button> 
+                <Button href="/vehicles" color="primary" className="vehicles-btn">
+                     Vehicles
+                </Button> 
+                
+                           
                 </div>
             
                 
