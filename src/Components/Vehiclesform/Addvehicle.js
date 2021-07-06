@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import VehicleForm from '../Vehiclesform/VehicleForm';
 
-import { Table, Button } from 'react-bootstrap';
+
 import styles from './VehicleForm.css';
 
 class VehicleList extends Component {

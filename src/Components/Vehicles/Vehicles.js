@@ -91,15 +91,18 @@ class VehicleList extends Component {
                                         <td>{item.price}</td>
                                     </tr>
                                 </tbody>
+                                
                                 <th><Button onClick={() => this.handleEdit(index)}>Edit</Button></th>
                                 
                                 <th><Button onClick={() => this.handleDelete(index)}>Delete</Button></th>
-                                
-                                
                                 </Table>
+
+                                
                             
                         })}
-                    
+                                <div>
+                                <Button className="add-btn" href="/Addvehicle">Add vehicle</Button>
+                                </div>
                     </div>    
                
             
