@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import VehicleForm from '../Vehiclesform/VehicleForm';
-import { Router, Switch, Route } from 'react-router-dom';
+import EditVehicle from '../Vehiclesform/EditVehicle';
+
 import { Table, Button } from 'react-bootstrap';
 import styles from './Vehicles.css';
 class VehicleList extends Component {
@@ -8,6 +8,7 @@ class VehicleList extends Component {
         currentIndex: -1,
         list: this.returnList()
     }
+    
 
     returnList() {
         if (localStorage.getItem('vehicles') == null)
@@ -43,8 +44,21 @@ class VehicleList extends Component {
         this.setState({ list, currentIndex: -1 })
     }
      
+    
 
     render() {
+        
+        if(this.state.currentIndex !== -1) {
+            return (
+                <div>
+                <EditVehicle
+                    currentIndex={this.state.currentIndex}
+                    list={this.state.list}
+                    onAddOrEdit={this.onAddOrEdit}
+                />
+                </div>
+            )
+        }
         
         
         
