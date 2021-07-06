@@ -1,7 +1,7 @@
 # AutoMotiveInspectionTool
 
 ##### This project can be live seen at https://automotiveinspectiontool.vercel.app/
-
+<!--
 ## General Information
 
 ##### The AutoMotiveInspectionTool project was created in react. It contains navigation consisting of links to particular subpages.
