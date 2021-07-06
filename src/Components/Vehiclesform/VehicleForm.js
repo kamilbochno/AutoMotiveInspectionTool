@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
-
+import { withRouter} from 'react-router-dom';
 
 import styles from './VehicleForm.css';
 
@@ -40,7 +40,7 @@ class VehicleForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.onAddOrEdit(this.state)
-        
+        this.props.history.push('/vehicles');
         
     }
 
@@ -124,9 +124,7 @@ class VehicleForm extends Component {
                 <Button color="primary" className="submit-btn" type="submit">
                      Submit
                 </Button> 
-                <Button href="/vehicles" color="primary" className="vehicles-btn">
-                     Vehicles
-                </Button> 
+                 
                 
                            
                 </div>
@@ -139,5 +137,5 @@ class VehicleForm extends Component {
     }
 }
 
-export default VehicleForm;
+export default withRouter(VehicleForm);
     

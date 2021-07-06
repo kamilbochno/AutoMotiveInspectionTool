@@ -124,9 +124,7 @@ class EditVehicle extends Component {
                 <Button color="primary" className="submit-btn" type="submit">
                      Submit
                 </Button> 
-                <Button href="/vehicles" color="primary" className="vehicles-btn">
-                     Vehicles
-                </Button> 
+                
                 
                            
                 </div>

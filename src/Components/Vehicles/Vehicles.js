@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import EditVehicle from '../Vehiclesform/EditVehicle';
 
+import { withRouter } from 'react-router-dom';
 import { Table, Button } from 'react-bootstrap';
 import styles from './Vehicles.css';
 class VehicleList extends Component {
@@ -8,6 +9,7 @@ class VehicleList extends Component {
         currentIndex: -1,
         list: this.returnList()
     }
+    
     
 
     returnList() {
@@ -44,10 +46,16 @@ class VehicleList extends Component {
         this.setState({ list, currentIndex: -1 })
     }
      
+    submitForm (e) {
+        e.preventDefault()
+        this.props.history.push('/Addvehicle');
+    }
     
 
     render() {
         
+        
+
         if(this.state.currentIndex !== -1) {
             return (
                 <div>
@@ -101,7 +109,7 @@ class VehicleList extends Component {
                             
                         })}
                                 <div>
-                                <Button className="add-btn" href="/Addvehicle">Add vehicle</Button>
+                                <Button className="add-btn" onClick={this.submitForm.bind(this)} >Add vehicle</Button>
                                 </div>
                     </div>    
                
@@ -110,4 +118,4 @@ class VehicleList extends Component {
     }
 }
 
-export default VehicleList;
+export default withRouter(VehicleList);
