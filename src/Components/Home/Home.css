@@ -22,12 +22,12 @@
     background-color: #ededed;
     margin: 0 auto;
     margin-top: -23px;
-    height: 750px;
+    height: 1200px;
     border: 1px solid black;
     
 }
 
-.carousel {
+.Carousel {
     margin-left: 160px;
     margin-top: 50px;
     width: 900px;
@@ -40,12 +40,20 @@
     margin-top: 50px;
 }
 
+.Contact {
+    margin: 0 auto;
+    width: 500px;
+}
+
+
+
+
 @media screen and (max-width: 1024px) {
     .Navigation {
         width: 100%;
         
     }
-    .carousel {
+    .Carousel {
         margin: 0 auto;
         width: 65%;
     }
@@ -66,8 +74,11 @@
     .Navigation {
         height: 180px;
     }
-    .carousel {
+    .Carousel {
         margin: 0 auto;
         width: 80%;
+    }
+    .Contact {
+        width: auto;
     }
 }
