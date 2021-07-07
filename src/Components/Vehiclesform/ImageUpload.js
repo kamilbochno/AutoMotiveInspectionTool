@@ -1,11 +1,14 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import ImageUploading from 'react-images-uploading';
 
+import styles from './ImageUpload.css';
 
 
 function ImageUpload() {
     const [images, setImages] = React.useState([]);
-    const maxNumber = 69;
+    const maxNumber = 3;
+    
 
     const onChange = (imageList, addUpdateIndex) => {
         console.log(imageList, addUpdateIndex);
@@ -20,6 +23,7 @@ function ImageUpload() {
                 onChange={onChange}
                 maxNumber={maxNumber}
                 dataURLKey="data_url"
+                
             
             >
                 {({
@@ -32,27 +36,27 @@ function ImageUpload() {
                     dragProps,
                 }) => (
                     <div className="upload__image-wrapper">
-                        <button
+                        <Button
                             style={isDragging ? { color: 'red' } : undefined}
                             onClick={onImageUpload}
                             {...dragProps}
                             >
                             Click or Drop here
-                        </button>
+                        </Button>
                         &nbsp;
-                        <button onClick={onImageRemoveAll}>
+                        <Button onClick={onImageRemoveAll}>
                             Remove all images
-                        </button>
+                        </Button>
                         {imageList.map((image, index) => (
                             <div key={index} className="image-item">
-                                <img src={image['data_url']} alt="" width="100" />
+                                <img src={image['data_url']} alt=""  width="100" height="" />
                                 <div className="image-item__btn-wrapper">
-                                <button onClick={() => onImageUpdate(index)}>
+                                <Button className="update-btn" onClick={() => onImageUpdate(index)}>
                                     Update
-                                </button>
-                                <button onClick={() => onImageRemove(index)}>
+                                </Button>
+                                <Button onClick={() => onImageRemove(index)}>
                                     Remove
-                                </button>
+                                </Button>
                                 </div>
                             </div>
                         ))}

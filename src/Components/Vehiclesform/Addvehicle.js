@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import VehicleForm from '../Vehiclesform/VehicleForm';
 
 
+import ImageUpload from '../Vehiclesform/ImageUpload';
+
 import styles from './VehicleForm.css';
 
 class VehicleList extends Component {
@@ -42,10 +44,14 @@ class VehicleList extends Component {
     return (
         <div>
                 <VehicleForm
+                    
                     currentIndex={this.state.currentIndex}
                     list={this.state.list}
                     onAddOrEdit={this.onAddOrEdit}
                 />
+                
+
+            
         </div>
     );
 }

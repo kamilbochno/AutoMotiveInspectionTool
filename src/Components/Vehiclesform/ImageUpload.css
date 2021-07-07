@@ -1,0 +1,32 @@
+.ImageUpload {
+    width: 350px;
+    margin-left: -20px;
+    height: 300px;
+    background-color:#cbeefc;
+    padding: 10px;
+}
+
+.image-item {
+    position: sticky;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-item__btn-wrapper {
+    float: left;
+    width: 300px;
+    height: auto;
+    margin-left: 20px;
+    
+    
+   
+    
+}
+
+.update-btn {
+    margin-right: 10px;
+}
