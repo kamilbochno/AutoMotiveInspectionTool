@@ -45,6 +45,10 @@
         width: 100%;
         
     }
+    .carousel {
+        margin: 0 auto;
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 1130px) {
@@ -60,7 +64,10 @@
         font-size: 23px;
     }
     .Navigation {
-        height: 150px;
+        height: 180px;
     }
-    
+    .carousel {
+        margin: 0 auto;
+        width: 80%;
+    }
 }
