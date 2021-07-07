@@ -28,7 +28,9 @@
 }
 
 .carousel {
+    margin-left: 160px;
     margin-top: 50px;
+    width: 900px;
 }
 .btn-link {
     margin-right: 20px !important;
