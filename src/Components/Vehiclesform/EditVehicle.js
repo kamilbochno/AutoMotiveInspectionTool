@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
+import ImageUpload from './ImageUpload';
 
 import styles from './VehicleForm.css';
 
@@ -52,6 +53,11 @@ class EditVehicle extends Component {
             <Form onSubmit={this.handleSubmit} autoComplete="off">
             <span className="close-btn"><a href="/">x</a></span>
             <h5 className="title" style={{marginLeft: "80px"}}>Fill inputs and submit to edit vehicle</h5>
+                <div className="img-upload">
+                    <h6>Upload image:</h6>
+                    <ImageUpload></ImageUpload>
+                </div>
+                
                 <div className="inputs">
                 <Form.Group controlId="id">
                     <Form.Label>Id: </Form.Label>

@@ -9,11 +9,14 @@ function ImageUpload() {
     const [images, setImages] = React.useState([]);
     const maxNumber = 3;
     
+    
 
     const onChange = (imageList, addUpdateIndex) => {
         console.log(imageList, addUpdateIndex);
         setImages(imageList);
     };
+
+    
 
     return (
         <div className="ImageUpload">
@@ -49,7 +52,7 @@ function ImageUpload() {
                         </Button>
                         {imageList.map((image, index) => (
                             <div key={index} className="image-item">
-                                <img src={image['data_url']} alt=""  width="100" height="" />
+                                <img src={image['data_url']} alt=""  width="70" height="" />
                                 <div className="image-item__btn-wrapper">
                                 <Button className="update-btn" onClick={() => onImageUpdate(index)}>
                                     Update

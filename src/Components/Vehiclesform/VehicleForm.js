@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Accordion, Card } from 'react-bootstrap';
 import { withRouter} from 'react-router-dom';
 
 import ImageUpload from './ImageUpload';
@@ -57,6 +57,7 @@ class VehicleForm extends Component {
                     <h6>Upload image:</h6>
                     <ImageUpload></ImageUpload>
                 </div>
+                
                 <div className="inputs">
                 
                    
