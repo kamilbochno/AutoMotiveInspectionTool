@@ -1,9 +1,26 @@
+body {
+  
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: url(./background.jpg) center center no-repeat;;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+
 .Login {
-  margin: 60px auto;
+  
+  margin-top: 200px;
+  margin-left: 500px;
   width: 500px;
   background-color: white;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
+  position: absolute;
   border-radius: 10px;
   height: 450px;
   display: grid;
@@ -15,15 +32,7 @@
 
 
 
-.close-btn {
-    position: absolute;
-    top: 2%;
-    right: 3%;
-    font-size: 1.5rem;
-    z-index: 1;
-    color: #fff;
-    cursor: pointer;
-}
+
 
 .login-form  {
     position: absolute;
@@ -42,10 +51,12 @@
   .sign-in {
     position: absolute;
     margin-top: 30px;
-    margin-left: 205px;
+    margin-left: 215px;
+    font-size: 24px;
   }
 
  .Login p {
+      
       margin-top: 20px;
  }
  

@@ -1,5 +1,6 @@
-import styles from './Home.css';
+import styles from '../Home/Home.css';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export const Navigation = (props) => {
   return (
@@ -30,35 +31,37 @@ export const Navigation = (props) => {
             >
               <ul className='nav navbar-nav'>
                 <li>
-                  <a href='#features' className='page-scroll'>
+                <HashLink to ="/#features" className='page-scroll'>
+                  
                     Features
-                  </a>
+                  
+                  </HashLink>
                 </li>
                 <li>
-                  <a href='#about' className='page-scroll'>
+                <HashLink to ="/#about" className='page-scroll'>
                     About
-                  </a>
+                </HashLink>
                 </li>
                 <li>
-                  <a href='#services' className='page-scroll'>
+                  <HashLink to="/#services" className='page-scroll'>
                     Services
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href='#portfolio' className='page-scroll'>
+                  <HashLink to="/#portfolio" className='page-scroll'>
                     Gallery
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href='#testimonials' className='page-scroll'>
+                <HashLink to="/#testimonials" className='page-scroll'>
                     Testimonials
-                  </a>
+                  </HashLink>
                 </li>
                 
                 <li>
-                  <a href='#contact' className='page-scroll'>
+                <HashLink to="/#contact" className='page-scroll'>
                     Contact
-                  </a>
+                  </HashLink>
                 </li>
             </ul>
             <ul className='nav navbar-nav subpages'>
@@ -89,4 +92,3 @@ export const Navigation = (props) => {
       
       
   export default Navigation;
-    
