@@ -54,7 +54,7 @@ class VehicleForm extends Component {
             <span className="close-btn"><a href="/">x</a></span>
             <h5 className="title">Fill inputs and submit to add new vehicle</h5>
                 <div className="img-upload">
-                    <h6>Upload image:</h6>
+                    <h6 className="upl">Upload image:</h6>
                     <ImageUpload></ImageUpload>
                 </div>
                 

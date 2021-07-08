@@ -54,7 +54,7 @@ class EditVehicle extends Component {
             <span className="close-btn"><a href="/">x</a></span>
             <h5 className="title" style={{marginLeft: "80px"}}>Fill inputs and submit to edit vehicle</h5>
                 <div className="img-upload">
-                    <h6>Upload image:</h6>
+                    <h6 className="upl">Upload image:</h6>
                     <ImageUpload></ImageUpload>
                 </div>
                 
