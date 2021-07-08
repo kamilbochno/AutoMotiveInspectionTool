@@ -1,11 +1,11 @@
-import { Button } from 'react-bootstrap';
+import styles from './Home.css';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = (props) => {
   return (
     
-        <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
-          <div className='container'>
+        <nav id='menu' className='navbar navbar-default '>
+          
             <div className='navbar-header'>
               <button
                 type='button'
@@ -63,25 +63,27 @@ export const Navigation = (props) => {
             </ul>
             <ul className='nav navbar-nav subpages'>
                 <li>
-                <NavLink activeClassName="active" to="/Login">
-                  <a href="" className='page-scroll'>
-                    Sign in
-                    </a>
-                    </NavLink> 
+                <NavLink activeClassName="active" to="/Login" className='page-scroll'>                 
+                  Sign in         
+                </NavLink> 
                 </li>
                 <li>
-                <NavLink activeClassName="active" to="/Login">
-                  <a href="" className='page-scroll'>
+                <NavLink activeClassName="active" to="/Register" className='page-scroll'>
+                  
                     Sign up
-                    </a>
+                    
                  </NavLink> 
                 </li>
                 
                 
               </ul>
             </div>
-          </div>
-        </nav>
+            
+          </nav>
+          
+          
+        
+        
       )
     }
       

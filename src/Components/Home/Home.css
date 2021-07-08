@@ -83,3 +83,15 @@
     }
 }
 */
+.navbar-brand {
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 50px;
+}
+.nav {
+    margin-left: 300px;
+    display: inline;
+}
+
+
+
