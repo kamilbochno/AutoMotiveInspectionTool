@@ -1,58 +1,90 @@
-
-
+import { Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 export const Navigation = (props) => {
   return (
-    <div className="nav">
-    <div className="site-mobile-menu site-navbar-target">
-        <div className="site-mobile-menu-header">
-          <div className="site-mobile-menu-close mt-3">
-            <span className="icon-close2 js-menu-toggle"></span>
-          </div>
-        </div>
-        <div className="site-mobile-menu-body"></div>
-      </div>
-
-
-      
-
-          
-
-        
-      
-
-      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-
-        <div class="container">
-          <div class="row align-items-center position-relative">
-
-
-            <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">AutoMotiveInspectionTool</span></a>
+    
+        <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
+          <div className='container'>
+            <div className='navbar-header'>
+              <button
+                type='button'
+                className='navbar-toggle collapsed'
+                data-toggle='collapse'
+                data-target='#bs-example-navbar-collapse-1'
+              >
+                {' '}
+                <span className='sr-only'>Toggle navigation</span>{' '}
+                <span className='icon-bar'></span>{' '}
+                <span className='icon-bar'></span>{' '}
+                <span className='icon-bar'></span>{' '}
+              </button>
+              <a className='navbar-brand page-scroll' href='#page-top'>
+                AutoMotiveInspectionTool
+              </a>{' '}
             </div>
-
-            <div class="col-12">
-              <nav class="site-navigation text-right ml-auto " role="navigation">
-
-                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                  <li><a href="#features" class="nav-link">Features</a></li>
-                  <li><a href="#about" class="nav-link">About</a></li>
-
-                  <li><a href="#services" class="nav-link">Services</a></li>
-                  <li><a href="#portfolio" class="nav-link">Gallery</a></li>
-                  <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                  <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-              </nav>
-
+    
+            <div
+              className='collapse navbar-collapse'
+              id='bs-example-navbar-collapse-1'
+            >
+              <ul className='nav navbar-nav'>
+                <li>
+                  <a href='#features' className='page-scroll'>
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href='#about' className='page-scroll'>
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href='#services' className='page-scroll'>
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href='#portfolio' className='page-scroll'>
+                    Gallery
+                  </a>
+                </li>
+                <li>
+                  <a href='#testimonials' className='page-scroll'>
+                    Testimonials
+                  </a>
+                </li>
+                
+                <li>
+                  <a href='#contact' className='page-scroll'>
+                    Contact
+                  </a>
+                </li>
+            </ul>
+            <ul className='nav navbar-nav subpages'>
+                <li>
+                <NavLink activeClassName="active" to="/Login">
+                  <a href="" className='page-scroll'>
+                    Sign in
+                    </a>
+                    </NavLink> 
+                </li>
+                <li>
+                <NavLink activeClassName="active" to="/Login">
+                  <a href="" className='page-scroll'>
+                    Sign up
+                    </a>
+                 </NavLink> 
+                </li>
+                
+                
+              </ul>
             </div>
-
-            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
           </div>
-        </div>
-
-      </header>
-      </div>
+        </nav>
       )
     }
+      
+      
+    
+    
