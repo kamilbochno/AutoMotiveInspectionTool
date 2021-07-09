@@ -3,8 +3,14 @@ import { Form, Button, Container } from 'react-bootstrap';
 import Navigation from './subnavigation.jsx';
 import styles from './Loginform.css';
 
-function Login() {
-    
+import validate from './loginvalidateInfo';
+import useForm from './loginuseForm';
+
+const Login = ( { submitForm }) => {
+    const { handleChange, handleSubmit, values, errors } = useForm(
+        submitForm,
+        validate
+    );
     return (
         
     <div className="Login-page">
@@ -15,17 +21,31 @@ function Login() {
         
         <h3 className="sign-in">Sign in</h3>
        
-        <Form className="login-form">
+        <Form onSubmit={handleSubmit} className="login-form">
             <Form.Group controlId="username">
                 <Form.Label>Username: </Form.Label>
-                <Form.Control type="text" placeholder="Enter username" />
-                
+                <Form.Control
+                    type="text"
+                    placeholder="Enter username"
+                    name="username"
+                    value={values.username}
+                    onChange={handleChange} 
+                />
+                {errors.username && <p className="validate">{errors.username}</p>}         
             </Form.Group>
 
             <Form.Group controlId="password">
                 <Form.Label>Password: </Form.Label>
-                <Form.Control type="password" placeholder="Enter password" />
+                <Form.Control 
+                    type="password" 
+                    name="password"
+                    placeholder="Enter password"
+                    value={values.password}
+                    onChange={handleChange}
+                />
+                {errors.password && <p className="validate">{errors.password}</p>}
             </Form.Group>
+
             
             <Button size="lg" variant="primary" type="submit">
                 Submit
