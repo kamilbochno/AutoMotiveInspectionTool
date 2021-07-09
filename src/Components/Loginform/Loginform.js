@@ -1,14 +1,17 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Container } from 'react-bootstrap';
 import Navigation from './subnavigation.jsx';
 import styles from './Loginform.css';
 
 function Login() {
     return (
+        
     <div className="Login-page">
+    <Container className="h-100">
     <Navigation></Navigation>
     
     <div className="Login">
+        
         <h3 className="sign-in">Sign in</h3>
        
         <Form className="login-form">
@@ -28,8 +31,11 @@ function Login() {
             </Button>
             <p>Do not have an account? Register <a href="/Register">Here</a></p>
 </Form>
+    
     </div>
+    </Container>
     </div>
+    
     );
 }
 

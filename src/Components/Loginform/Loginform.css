@@ -1,6 +1,6 @@
 body {
   
-  height: 100%;
+  
   width: 100%;
   padding: 0;
   margin: 0;
@@ -9,18 +9,26 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+  
+  
   
 }
 
+.Login-page {
+  height: 550px;
+  align-items: center;
+}
 
 .Login {
   
-  margin-top: 200px;
-  margin-left: 500px;
-  width: 500px;
+  
+  margin: 170 auto;
+  
+  width: 450px;
   background-color: white;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-  position: absolute;
+  position: relative;
   border-radius: 10px;
   height: 450px;
   display: grid;
@@ -35,12 +43,12 @@ body {
 
 
 .login-form  {
-    position: absolute;
+  
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
-    
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,24 +57,66 @@ body {
 
 
   .sign-in {
-    position: absolute;
+    margin-left: 190px;
     margin-top: 30px;
-    margin-left: 215px;
+    position: absolute;
+  
     font-size: 24px;
   }
 
  .Login p {
       
-      margin-top: 20px;
+      margin-top: 5px;
  }
  
  @media screen and (max-width: 430px) {
   .Login {
+    margin-top: 130px;
     width: 320px;
+    margin-left: 35px;
+    height: 400px;
   }
   .sign-in {
     position: absolute;
     margin-top: 30px;
-    margin-left: 115px;
+    margin-left: 125px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .Login {
+    height: 350px;
+    width: 320px;
+    margin-left: 10px;
+    margin-top: 170px;
+  }
+  .sign-in {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 125px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Login-page {
+    width: 350px;
+    
+  }
+  
+  .Login {
+    
+    margin-left: 10px;
+    width: 300px;
+    margin-top: 180px;
+    height: 300px;
+    
+    
+
+
+  }
+  .sign-in {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 110px;
   }
 }
