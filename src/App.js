@@ -10,14 +10,14 @@ import Login from './Components/Loginform/Loginform';
 import Register from './Components/Registerform/Registerform';
 import Vehicles from './Components/Vehicles/Vehicles';
 import Addvehicle from './Components/Vehiclesform/Addvehicle';
-
+import Form from './Components/Registerform/Form';
 function App() {
 
   return (
     <div className="App">
     <Route exact path="/" component={Home} />
     <Route exact path="/Login" component={Login} />
-    <Route exact path="/Register" component={Register} />
+    <Route exact path="/Register" component={Form} />
     <Route exact path="/Vehicles" component={Vehicles} />
     <Route exact path="/Addvehicle" component={Addvehicle} />
     </div> 
