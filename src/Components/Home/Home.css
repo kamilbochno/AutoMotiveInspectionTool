@@ -83,14 +83,18 @@
     }
 }
 */
-.navbar-brand {
-    
-    
-}
+
 .nav {
     
     display: inline;
 }
+
+.welcome {
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
 
 
 

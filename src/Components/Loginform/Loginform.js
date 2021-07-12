@@ -1,16 +1,22 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Form, Button, Container } from 'react-bootstrap';
 import Navigation from './subnavigation.jsx';
 import styles from './Loginform.css';
-
+import Loginpage from '../Loginpage/Loginpage';
 import validate from './loginvalidateInfo';
 import useForm from './loginuseForm';
+
+
 
 const Login = ( { submitForm }) => {
     const { handleChange, handleSubmit, values, errors } = useForm(
         submitForm,
         validate
     );
+    
+    
+
     return (
         
     <div className="Login-page">
@@ -48,9 +54,10 @@ const Login = ( { submitForm }) => {
 
             
             <Button size="lg" variant="primary" type="submit">
-                Submit
+              Submit
             </Button>
             <p>Do not have an account? Register <a href="/Register">Here</a></p>
+            <p className="test">Note: For test login use username: test password: 123</p>
 </Form>
     
     </div>

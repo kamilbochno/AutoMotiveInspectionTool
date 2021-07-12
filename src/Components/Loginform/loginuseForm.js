@@ -1,4 +1,5 @@
 import { useState, useEffect  } from "react";
+import { useHistory } from 'react-router-dom';
 
 const useForm = (callback, validate) => {
     const [values, setValues] = useState({
@@ -16,12 +17,23 @@ const useForm = (callback, validate) => {
             [name]: value
         });
     };
-
+    const history = useHistory();
+    
+    
     const handleSubmit = e => {
+        
         e.preventDefault();
-
         setErrors(validate(values));
         setIsSubmitting(true);
+
+        
+        
+        if (values.username === "test" && values.password === "123") {
+                history.push("/Loginpage")
+
+        }
+        
+        
     };
 
     useEffect(
