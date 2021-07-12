@@ -51,14 +51,14 @@ class VehicleForm extends Component {
         return (
             <div className="main-form">
             <Form onSubmit={this.handleSubmit} autoComplete="off">
-            <span className="close-btn"><a href="/">x</a></span>
-            <h5 className="title">Fill inputs and submit to add new vehicle</h5>
+           
+            <h5 id="title">Fill inputs and submit to add new vehicle</h5>
                 <div className="img-upload">
                     <h6 className="upl">Upload image:</h6>
                     <ImageUpload></ImageUpload>
                 </div>
                 
-                <div className="inputs">
+                <div className="vehicle-inputs1">
                 
                    
                 
@@ -73,28 +73,67 @@ class VehicleForm extends Component {
                         onChange={this.handleInputChange}
                     />
                 </Form.Group>
-                <Form.Group controlId="name">
-                    <Form.Label>Name: </Form.Label>
-                    <Form.Control
+                <Form.Group controlId="make">
+                    <Form.Label>Brand: </Form.Label>
+                    <Form.Control as="select"
                         className="input-control"
                         type="text"
                         name="name"
                         value={this.state.name}
-                        placeholder="Enter name of vehicle"
+                        
                         onChange={this.handleInputChange}
-                    />
+                        >
+                            <option></option>
+                            <option>Volkswagen</option>
+                            <option>BMW</option>
+                            <option>Audi</option>
+                            <option>Opel</option>
+                            <option>Ford</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Renault</option>
+                            <option>Toyota</option>
+                            <option>Alfa Romeo</option>
+                            <option>Chevrolet</option>
+                            <option>Citroën</option>         
+                            <option>Dacia</option>
+                            <option>Dodge</option>
+                            <option>Fiat</option>
+                            <option>Hyundai</option>
+                            <option>Honda</option>
+                        </Form.Control>
+                    
                 </Form.Group>
                 <Form.Group controlId="model">
                     <Form.Label>Model: </Form.Label>
-                    <Form.Control
+                    <Form.Control as="select"
                         className="input-control"
                         type="text"
                         name="model"
                         value={this.state.model}
                         placeholder="Enter model of vehicle"
                         onChange={this.handleInputChange}
-                    />
+                    >
+                    <option></option>
+                    <option>Volkswagen</option>
+                    <option>BMW</option>
+                    <option>Audi</option>
+                    <option>Opel</option>
+                    <option>Ford</option>
+                    <option>Mercedes-Benz</option>
+                    <option>Renault</option>
+                    <option>Toyota</option>
+                    <option>Alfa Romeo</option>
+                    <option>Chevrolet</option>
+                    <option>Citroën</option>         
+                    <option>Dacia</option>
+                    <option>Dodge</option>
+                    <option>Fiat</option>
+                    <option>Hyundai</option>
+                    <option>Honda</option>
+                    </Form.Control>
                 </Form.Group>
+                
+                
                 <Form.Group controlId="year">
                     <Form.Label>Year: </Form.Label>
                     <Form.Control
@@ -127,21 +166,22 @@ class VehicleForm extends Component {
                         placeholder="Enter price of vehicle"
                         onChange={this.handleInputChange}
                     />
+                    
                 </Form.Group>   
-                
+                 
                 
                 <Button color="primary" className="submit-btn" type="submit">
                      Submit
                 </Button> 
-                 
                 
-                           
                 </div>
+                           
+                
             
                 
                 
                 </Form>
-                </div>   
+                 </div> 
         );
     }
 }

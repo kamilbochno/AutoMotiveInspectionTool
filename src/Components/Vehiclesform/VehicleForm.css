@@ -1,29 +1,31 @@
 .main-form {
-    margin: 30px auto;
-    width: 500px;
+    margin: 200 auto;
+    width: 800px;
     background-color: white;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     
     border-radius: 10px;
-    height: auto;
+    height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.inputs {
+.vehicle-inputs1 {
     
-    max-height: 300px;
-    margin-left: 250px;
-    margin-top: 300px;
+    max-height: 500px;
+    margin-left: 560px;
+    margin-top: 200px;
     transform: translate(-50%, -50%);
     width: 190px;
     
     
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
+
+
 
 .input-control {
    
@@ -34,24 +36,16 @@
 
 
 
-.title {
+#title {
     position: absolute;
-    margin-top: 5px;
-    margin-left: 60px;
+    margin-top: 20px;
+    margin-left: 120px;
 }
 
-.close-btn {
-    position: absolute;
-    top: 2px;
-    right: 4%;
-    font-size: 1.5rem;
-    z-index: 1;
-    color: #fff;
-    cursor: pointer;
-}
+
 
 .img-upload {
-    
+    position: absolute;
     margin-top: 40px;
     margin-left: 94px;
     height: auto;

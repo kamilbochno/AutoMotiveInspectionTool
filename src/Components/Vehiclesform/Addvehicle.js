@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import VehicleForm from '../Vehiclesform/VehicleForm';
-
+import Loginnavigation from '../Loginpage/Loginnavigation';
 
 import ImageUpload from '../Vehiclesform/ImageUpload';
 
@@ -43,6 +43,7 @@ class VehicleList extends Component {
  render() {
     return (
         <div>
+                <Loginnavigation></Loginnavigation>
                 <VehicleForm
                     
                     currentIndex={this.state.currentIndex}
