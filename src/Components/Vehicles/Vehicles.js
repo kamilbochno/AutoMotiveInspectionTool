@@ -1,9 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component, useState, render } from 'react'
 import EditVehicle from '../Vehiclesform/EditVehicle';
 import Loginnavigation from '../Loginpage/Loginnavigation';
 import { withRouter } from 'react-router-dom';
-import { Table, Button } from 'react-bootstrap';
+import { Table, Button, Modal } from 'react-bootstrap';
+
 import styles from './Vehicles.css';
+
+
+
+    
+
 class VehicleList extends Component {
     state = {
         currentIndex: -1,
@@ -26,15 +32,25 @@ class VehicleList extends Component {
         
         
     }
-
     
-
     handleDelete = (index) => {
+        
+       
+            
+          
+            
+          
+         
         let list = this.returnList()
         list.splice(index, 1);
         localStorage.setItem('vehicles', JSON.stringify(list))
         this.setState({ list, currentIndex: -1 })
+        
+        
+        
+        
     }
+    
 
     onAddOrEdit = (data) => {
         let list = this.returnList()
@@ -42,8 +58,8 @@ class VehicleList extends Component {
             list.push(data)
         else
             list[this.state.currentIndex] = data
-        localStorage.setItem('vehicles', JSON.stringify(list))
-        this.setState({ list, currentIndex: -1 })
+            localStorage.setItem('vehicles', JSON.stringify(list))
+            this.setState({ list, currentIndex: -1 })
     }
      
     submitForm (e) {
@@ -54,6 +70,9 @@ class VehicleList extends Component {
 
     render() {
         
+        
+    
+
         
 
         if(this.state.currentIndex !== -1) {
@@ -71,9 +90,15 @@ class VehicleList extends Component {
         
         
         return (
+                    
             
+            
+            
+
             <div className="main-home">
             <Loginnavigation></Loginnavigation>
+
+           
          <div className="vehicle-list"> 
             
              <h3>List of vehicles</h3>         
@@ -101,6 +126,7 @@ class VehicleList extends Component {
                                 </tbody>
                                 
                                 <th><Button onClick={() => this.handleEdit(index)}>Edit</Button></th>
+                                            
                                 
                                 <th><Button onClick={() => this.handleDelete(index)}>Delete</Button></th>
                                 </Table>
@@ -111,6 +137,9 @@ class VehicleList extends Component {
                                 <div>
                                 <Button className="add-btn" onClick={this.submitForm.bind(this)} >Add vehicle</Button>
                                 </div>
+                                
+      
+
                     </div>    
                     </div>
             

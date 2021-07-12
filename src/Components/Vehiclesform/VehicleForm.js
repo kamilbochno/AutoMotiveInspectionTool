@@ -10,7 +10,10 @@ class VehicleForm extends Component {
     state = {
         ...this.returnStateObject()
     }
-
+    constructor(props) {
+        super(props);
+        
+    }
     returnStateObject() {
         if (this.props.currentIndex === -1)
             return {
@@ -44,7 +47,7 @@ class VehicleForm extends Component {
         this.props.history.push('/vehicles');
         
     }
-
+    
     
 
     render() {
@@ -67,6 +70,7 @@ class VehicleForm extends Component {
                     <Form.Control
                         className="input-control"
                         type="number"
+                        min="0"
                         required
                         name="id"
                         value={this.state.id}
@@ -143,6 +147,7 @@ class VehicleForm extends Component {
                         required
                         className="input-control"
                         type="number"
+                        min="1950"
                         name="year"
                         value={this.state.year}
                         placeholder="Year of production"
@@ -183,6 +188,7 @@ class VehicleForm extends Component {
                         required
                         className="input-control"
                         type="number"
+                        min="0"
                         name="price"
                         value={this.state.price}
                         placeholder="Enter price of vehicle"
