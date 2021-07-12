@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import EditVehicle from '../Vehiclesform/EditVehicle';
-
+import Loginnavigation from '../Loginpage/Loginnavigation';
 import { withRouter } from 'react-router-dom';
 import { Table, Button } from 'react-bootstrap';
 import styles from './Vehicles.css';
@@ -72,10 +72,10 @@ class VehicleList extends Component {
         
         return (
             
-            
-              
+            <div className="main-home">
+            <Loginnavigation></Loginnavigation>
          <div className="vehicle-list"> 
-         <span className="close-btn"><a href="/">x</a></span>
+            
              <h3>List of vehicles</h3>         
                         {this.state.list.map((item, index) => {
                             return <Table responsive striped bordered hover horizontal key={index}>
@@ -112,7 +112,7 @@ class VehicleList extends Component {
                                 <Button className="add-btn" onClick={this.submitForm.bind(this)} >Add vehicle</Button>
                                 </div>
                     </div>    
-               
+                    </div>
             
         )
     }

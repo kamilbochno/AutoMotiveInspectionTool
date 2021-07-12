@@ -67,6 +67,7 @@ class VehicleForm extends Component {
                     <Form.Control
                         className="input-control"
                         type="number"
+                        required
                         name="id"
                         value={this.state.id}
                         placeholder="Enter id"
@@ -80,7 +81,7 @@ class VehicleForm extends Component {
                         type="text"
                         name="name"
                         value={this.state.name}
-                        
+                        required
                         onChange={this.handleInputChange}
                         >
                             <option></option>
@@ -106,6 +107,7 @@ class VehicleForm extends Component {
                 <Form.Group controlId="model">
                     <Form.Label>Model: </Form.Label>
                     <Form.Control as="select"
+                        required
                         className="input-control"
                         type="text"
                         name="model"
@@ -113,6 +115,7 @@ class VehicleForm extends Component {
                         placeholder="Enter model of vehicle"
                         onChange={this.handleInputChange}
                     >
+                    
                     <option></option>
                     <option>Volkswagen</option>
                     <option>BMW</option>
@@ -137,6 +140,7 @@ class VehicleForm extends Component {
                 <Form.Group controlId="year">
                     <Form.Label>Year: </Form.Label>
                     <Form.Control
+                        required
                         className="input-control"
                         type="number"
                         name="year"
@@ -147,18 +151,36 @@ class VehicleForm extends Component {
                 </Form.Group>
                 <Form.Group controlId="color">
                     <Form.Label>Color: </Form.Label>
-                    <Form.Control
+                    <Form.Control as="select"
+                        required
                         className="input-control"
                         type="text"
                         name="color"
                         value={this.state.color}
-                        placeholder="Enter color of vehicle"
-                        onChange={this.handleInputChange}
-                    />
+                        onChange={this.handleInputChange}>
+                            <option></option>
+                            <option>Red</option>
+                            <option>White</option>
+                            <option>Green</option>
+                            <option>Gold</option>
+                            <option>Yellow</option>
+                            <option>Blue</option>
+                            <option>Gray</option>
+                            <option>Silver</option>
+                            <option>Purple</option>
+                            <option>Black</option>
+                            <option>Brown</option>         
+                            <option>Maroon</option>
+                            <option>Beige</option>
+                            <option>Other color</option>
+                            
+                        </Form.Control>
+
                 </Form.Group>
                 <Form.Group controlId="price">
                     <Form.Label>Price: </Form.Label>
                     <Form.Control
+                        required
                         className="input-control"
                         type="number"
                         name="price"
