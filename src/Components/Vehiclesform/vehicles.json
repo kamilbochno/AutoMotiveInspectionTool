@@ -1,0 +1,333 @@
+[
+	{
+	"id": "1",
+	"name": "ALFA ROMEO",
+	"models": [
+
+	]
+}, 
+	{
+	"id": "2",
+	"name": "ASTON MARTIN",
+	"models": [
+
+	]
+}, {
+	"id": "3",
+	"name": "AUDI",
+	"models": [
+
+	]
+}, 
+	{
+		"id": "4",
+	"name": "BENTLEY",
+	"models": [
+
+	]
+}, {
+	"id": "5",
+	"name": "BMW",
+	"models": [
+
+	]
+},  
+	{
+		"id": "6",
+	"name": "BUGATTI",
+	"models": [
+
+	]
+}, {
+	"id": "7",
+	"name": "CADILLAC",
+	"models": [
+
+	]
+}, {
+	"id": "8",
+	"name": "CHEVROLET",
+	"models": [
+
+	]
+}, {
+	"id": "9",
+	"name": "CHEVRON",
+	"models": [
+
+	]
+}, {
+	"id": "10",
+	"name": "CITROËN",
+	"models": [
+
+	]
+}, {
+	"id": "11",
+	"name": "CHRYSLER",
+	"models": [
+
+	]
+}, {
+	"id": "12",
+	"name": "DACIA",
+	"models": [
+
+	]
+}, 
+	 {
+		"id": "13",
+	"name": "DODGE",
+	"models": [
+
+	]
+},
+	{
+		"id": "14",
+	"name": "FERRARI",
+	"models": [
+
+	]
+}, {
+	"id": "15",
+	"name": "FIAT",
+	"models": [
+
+	]
+},  {
+	"id": "16",
+	"name": "FORD",
+	"models": [
+
+	]
+}, 
+	 {
+		"id": "17",
+	"name": "HONDA",
+	"models": [
+
+	]
+},  {
+	"id": "18",
+	"name": "HYUNDAI",
+	"models": [
+
+	]
+}, 
+	{
+		"id": "19",
+	"name": "JAGUAR",
+	"models": [
+
+	]
+}, {
+	"id": "20",
+	"name": "JEEP",
+	"models": [
+
+	]
+},  {
+	"id": "21",
+	"name": "KIA",
+	"models": [
+
+	]
+},  {
+	"id": "22",
+	"name": "LAMBORGHINI",
+	"models": [
+
+	]
+}, {
+	"id": "23",
+	"name": "LANCIA",
+	"models": [
+
+	]
+}, {
+	"id": "24",
+	"name": "LAND ROVER",
+	"models": [
+
+	]
+},   {
+	"id": "25",
+	"name": "LEXUS",
+	"models": [
+
+	]
+}, 
+	 {
+		"id": "26",
+	"name": "MASERATI",
+	"models": [
+
+	]
+}, {
+	"id": "27",
+	"name": "MAZDA",
+	"models": [
+
+	]
+}, {
+	"id": "28",
+	"name": "MCLAREN",
+	"models": [
+
+	]
+}, {
+	"id": "29",
+	"name": "MERCEDES-BENZ",
+	"models": [
+
+	]
+}, {
+	"id": "30",
+	"name": "MITSUBISHI",
+	"models": [
+
+	]
+}, {
+	"id": "31",
+	"name": "NISSAN",
+	"models": [
+
+	]
+}, {
+	"id": "32",
+	"name": "OPEL",
+	"models": [
+
+	]
+}, {
+	"id": "33",
+	"name": "PEUGEOT",
+	"models": [
+
+	]
+}, {
+	"id": "34",
+	"name": "PORSCHE",
+	"models": [
+
+	]
+}, {
+	"id": "35",
+	"name": "RENAULT",
+	"models": [
+
+	]
+}, {
+	"id": "36",
+	"name": "ROLLS-ROYCE",
+	"models": [
+
+	]
+}, {
+	"id": "37",
+	"name": "SAAB",
+	"models": [
+
+	]
+}, {
+	"id": "38",
+	"name": "SEAT",
+	"models": [
+
+	]
+},
+ {
+	"id": "39",
+	"name": "ŠKODA",
+	"models": [
+
+	]
+}, {
+	"id": "40",
+	"name": "SMART",
+	"models": [
+
+	]
+},
+ {
+	"id": "41",
+	"name": "SSANGYONG",
+	"models": [
+
+	]
+},  {
+	"id": "42",
+	"name": "SUBARU",
+	"models": [
+
+	]
+}, {
+	"id": "43",
+	"name": "SUZUKI",
+	"models": [
+
+	]
+},  {
+	"id": "44",
+	"name": "TESLA",
+	"models": [
+
+	]
+},  {
+	"id": "45",
+	"name": "TOYOTA",
+	"models": [
+
+	]
+},  	
+	{
+		"id": "46",
+	"name": "VOLKSWAGEN",
+	"models": [
+		"Fox",
+		"Gol",
+		"Golf",
+		"Lavida",
+		"Santana",
+		"ID.3",
+		"Up",
+		"Arteon",
+		"Bora",
+		"Jetta",
+		"Lamando",
+		"Lavida",
+		"Magotan",
+		"Passat",
+		"Phideon",
+		"Polo sedan/Vento",
+		"Sagitar",
+		"Polo",
+		"Virtus",
+		"Voyage",
+		"Atlas/Teramont",
+		"ID.4",
+		"ID.6",
+		"Nivus",
+		"T-Cross",
+		"T-Roc",
+		"Talagon",
+		"Taos",
+		"Tayron",
+		"Tiguan",
+		"Touareg",
+		"Touran",
+		"Sharan",
+		"Viloran"
+	]
+},{	
+	"id": "47",
+	"name": "VOLVO",
+	"models": [
+		
+		
+
+
+
+	]
+}
+]

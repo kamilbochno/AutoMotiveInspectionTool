@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Accordion, Card } from 'react-bootstrap';
 import { withRouter} from 'react-router-dom';
-
+import brands from './vehicles.json';
 import ImageUpload from './ImageUpload';
 import styles from './VehicleForm.css';
 
@@ -9,11 +9,19 @@ class VehicleForm extends Component {
     
     state = {
         ...this.returnStateObject()
-    }
-    constructor(props) {
-        super(props);
         
     }
+    constructor() {
+        super();
+        this.state = {
+            carMake: ''
+        }
+    }
+
+    
+    
+    
+
     returnStateObject() {
         if (this.props.currentIndex === -1)
             return {
@@ -37,8 +45,11 @@ class VehicleForm extends Component {
 
     handleInputChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+            carMake:e.target.selectedIndex
+            
         })
+        
     }
 
     handleSubmit = (e) => {
@@ -49,8 +60,9 @@ class VehicleForm extends Component {
     }
     
     
-
+    
     render() {
+        
         return (
             <div className="main-form">
             <Form onSubmit={this.handleSubmit} autoComplete="off">
@@ -84,27 +96,16 @@ class VehicleForm extends Component {
                         className="input-control"
                         type="text"
                         name="name"
+                        
                         value={this.state.name}
                         required
                         onChange={this.handleInputChange}
-                        >
-                            <option></option>
-                            <option>Volkswagen</option>
-                            <option>BMW</option>
-                            <option>Audi</option>
-                            <option>Opel</option>
-                            <option>Ford</option>
-                            <option>Mercedes-Benz</option>
-                            <option>Renault</option>
-                            <option>Toyota</option>
-                            <option>Alfa Romeo</option>
-                            <option>Chevrolet</option>
-                            <option>Citroën</option>         
-                            <option>Dacia</option>
-                            <option>Dodge</option>
-                            <option>Fiat</option>
-                            <option>Hyundai</option>
-                            <option>Honda</option>
+                        >   
+                            <option selected disabled="true">--Select brand--</option>
+                            {brands.map((carBrand, index) => {
+                                return <option>{carBrand.name}</option>
+                            })}
+                            
                         </Form.Control>
                     
                 </Form.Group>
@@ -112,31 +113,28 @@ class VehicleForm extends Component {
                     <Form.Label>Model: </Form.Label>
                     <Form.Control as="select"
                         required
+                        
                         className="input-control"
                         type="text"
                         name="model"
                         value={this.state.model}
                         placeholder="Enter model of vehicle"
                         onChange={this.handleInputChange}
+                        
                     >
-                    
-                    <option></option>
-                    <option>Volkswagen</option>
-                    <option>BMW</option>
-                    <option>Audi</option>
-                    <option>Opel</option>
-                    <option>Ford</option>
-                    <option>Mercedes-Benz</option>
-                    <option>Renault</option>
-                    <option>Toyota</option>
-                    <option>Alfa Romeo</option>
-                    <option>Chevrolet</option>
-                    <option>Citroën</option>         
-                    <option>Dacia</option>
-                    <option>Dodge</option>
-                    <option>Fiat</option>
-                    <option>Hyundai</option>
-                    <option>Honda</option>
+                        <option selected disabled="true">--Select model--</option>
+                        {brands.map((carBrand, index) => {
+                            if (carBrand.name === brands.id)
+                            {
+                            return brands.models.map((brandModels, index) => {
+                                return <option>{brandModels}</option>
+                            })
+                        }
+                        })}
+                            
+                        
+                            
+                            
                     </Form.Control>
                 </Form.Group>
                 
@@ -163,7 +161,7 @@ class VehicleForm extends Component {
                         name="color"
                         value={this.state.color}
                         onChange={this.handleInputChange}>
-                            <option></option>
+                            <option selected disabled="true">--Select color--</option>
                             <option>Red</option>
                             <option>White</option>
                             <option>Green</option>
