@@ -11,13 +11,7 @@ class VehicleForm extends Component {
         ...this.returnStateObject()
         
     }
-    constructor() {
-        super();
-        this.state = {
-            carMake: ''
-        }
-    }
-
+    
     
     
     
@@ -25,6 +19,7 @@ class VehicleForm extends Component {
     returnStateObject() {
         if (this.props.currentIndex === -1)
             return {
+                image: '',
                 id: '',
                 name: '',
                 model: '',
@@ -46,7 +41,7 @@ class VehicleForm extends Component {
     handleInputChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-            carMake:e.target.selectedIndex
+            carMake: brands?.[e.target.selectedIndex - 1]
             
         })
         
@@ -70,12 +65,30 @@ class VehicleForm extends Component {
             <h5 id="title">Fill inputs and submit to add new vehicle</h5>
                 <div className="img-upload">
                     <h6 className="upl">Upload image:</h6>
-                    <ImageUpload></ImageUpload>
+                    
+                    <Form.Group controlId="image"
+                    name="image"
+                    value={this.state.image}
+                    className="input-control"
+                    onChange={this.handleInputChange}>
+                    <Form.File id="exampleFormControlFile1" label="Example file input" />
+                    </Form.Group>
+                    
+                    
+                    
+                        
+                        
+                        
+                        
+                    
+                    
                 </div>
                 
                 <div className="vehicle-inputs1">
                 
-                   
+                
+                    
+                  
                 
                 <Form.Group controlId="id">
                     <Form.Label>Id: </Form.Label>
@@ -123,14 +136,10 @@ class VehicleForm extends Component {
                         
                     >
                         <option selected disabled="true">--Select model--</option>
-                        {brands.map((carBrand, index) => {
-                            if (carBrand.name === brands.id)
-                            {
-                            return brands.models.map((brandModels, index) => {
-                                return <option>{brandModels}</option>
-                            })
+                        {this?.state?.carMake && this?.state?.carMake?.models.map((brandModel, index) => {
+                            return <option>{brandModel}</option>
+                        })
                         }
-                        })}
                             
                         
                             

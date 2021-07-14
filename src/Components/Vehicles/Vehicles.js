@@ -1,9 +1,9 @@
-import React, { Component, useState, render } from 'react'
+import React, { Component, useState } from 'react'
 import EditVehicle from '../Vehiclesform/EditVehicle';
 import Loginnavigation from '../Loginpage/Loginnavigation';
 import { withRouter } from 'react-router-dom';
 import { Table, Button, Modal } from 'react-bootstrap';
-
+import Searchbar from './search';
 import styles from './Vehicles.css';
 
 
@@ -15,6 +15,7 @@ class VehicleList extends Component {
         currentIndex: -1,
         list: this.returnList()
     }
+    
     
     
 
@@ -67,12 +68,11 @@ class VehicleList extends Component {
         this.props.history.push('/Addvehicle');
     }
     
-
-    render() {
+    render() { 
         
         
-    
-
+        
+        
         
 
         if(this.state.currentIndex !== -1) {
@@ -87,12 +87,12 @@ class VehicleList extends Component {
             )
         }
         
-        
+         
         
         return (
                     
             
-            
+          
             
 
             <div className="main-home">
@@ -101,11 +101,13 @@ class VehicleList extends Component {
            
          <div className="vehicle-list"> 
             
-             <h3>List of vehicles</h3>         
+             <h3>List of vehicles</h3>  
+                         
                         {this.state.list.map((item, index) => {
                             return <Table responsive striped bordered hover horizontal key={index}>
                                 <thead>
                                 <tr>
+                                <th className="table-items">Image</th>
                                 <th className="table-items">id </th>
                                 <th className="table-items">name </th>
                                 <th className="table-items">model </th>
@@ -116,6 +118,7 @@ class VehicleList extends Component {
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>{item.image}</td>
                                         <td>{item.id}</td>
                                         <td>{item.name}</td>
                                         <td>{item.model}</td>

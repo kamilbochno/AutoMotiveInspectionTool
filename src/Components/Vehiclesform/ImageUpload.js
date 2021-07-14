@@ -12,6 +12,7 @@ function ImageUpload() {
     
 
     const onChange = (imageList, addUpdateIndex) => {
+        
         console.log(imageList, addUpdateIndex);
         setImages(imageList);
     };
@@ -20,12 +21,16 @@ function ImageUpload() {
 
     return (
         <div className="ImageUpload">
+
             <ImageUploading
                 multiple
                 value={images}
                 onChange={onChange}
                 maxNumber={maxNumber}
                 dataURLKey="data_url"
+                controlId="image"
+                name="image"
+                
                 
             
             >
