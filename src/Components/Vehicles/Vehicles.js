@@ -3,8 +3,10 @@ import EditVehicle from '../Vehiclesform/EditVehicle';
 import Loginnavigation from '../Loginpage/Loginnavigation';
 import { withRouter } from 'react-router-dom';
 import { Table, Button, Modal } from 'react-bootstrap';
+import Delmodal from './Modal';
 import Searchbar from './search';
-import styles from './Vehicles.css';
+import './Vehicles.css';
+import './modal.css';
 
 
 
@@ -13,10 +15,20 @@ import styles from './Vehicles.css';
 class VehicleList extends Component {
     state = {
         currentIndex: -1,
-        list: this.returnList()
+        list: this.returnList(),
     }
     
     
+
+    showModal = () => {
+        this.setState({
+            show: true
+        });
+    };
+
+    hideModal = () => {
+        this.setState({show: false});
+    };
     
 
     returnList() {
@@ -36,16 +48,13 @@ class VehicleList extends Component {
     
     handleDelete = (index) => {
         
-       
-            
-          
-            
-          
+           
          
         let list = this.returnList()
         list.splice(index, 1);
         localStorage.setItem('vehicles', JSON.stringify(list))
         this.setState({ list, currentIndex: -1 })
+        this.hideModal()
         
         
         
@@ -114,6 +123,10 @@ class VehicleList extends Component {
                                 <th className="table-items">year </th>
                                 <th className="table-items">color </th>
                                 <th className="table-items">price </th>
+                                <th className="table-items">car body </th>
+                                <th className="table-items">car fuel </th>
+                                <th className="table-items">car capacity </th>
+                                <th className="table-items">car hp </th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -125,20 +138,29 @@ class VehicleList extends Component {
                                         <td>{item.year}</td>
                                         <td>{item.color}</td>
                                         <td>{item.price}</td>
+                                        <td>{item.car_body}</td>
+                                        <td>{item.car_fuel}</td>
+                                        <td>{item.car_capacity}</td>
+                                        <td>{item.HP}</td>
+                                        
                                     </tr>
                                 </tbody>
                                 
-                                <th><Button onClick={() => this.handleEdit(index)}>Edit</Button></th>
-                                            
+                                <th><Button className="vehicles-btn" onClick={() => this.handleEdit(index)}>Edit</Button></th>
+                                <Delmodal show={this.state.show} handleClose={this.hideModal}>                  
+                                    <h1 className="Head">Confirmation</h1>
+                                    <p className="M-description">Are you sure to delete this vehicle?</p>
+                                    <Button className="M-btn" onClick={() => this.handleDelete(index)}>Delete</Button>
+                                </Delmodal>             
                                 
-                                <th><Button onClick={() => this.handleDelete(index)}>Delete</Button></th>
+                                <th><Button className="vehicles-btn" onClick={this.showModal}>Delete</Button></th>
                                 </Table>
 
                                 
                             
                         })}
                                 <div>
-                                <Button className="add-btn" onClick={this.submitForm.bind(this)} >Add vehicle</Button>
+                                <Button className="vehicles-btn" onClick={this.submitForm.bind(this)} >Add vehicle</Button>
                                 </div>
                                 
       

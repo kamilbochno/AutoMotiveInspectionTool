@@ -621,7 +621,12 @@
   {
     "id": "25",
     "name": "MASERATI",
-    "models": ["Ghibli", "Quattroporte", "MC20", "Levante"]
+    "models": [
+      "Ghibli",
+      "Quattroporte",
+      "MC20",
+      "Levante"
+    ]
   },
   {
     "id": "26",

@@ -1,20 +1,20 @@
 .main-home {
+    
     position: absolute;
     height: 400px;
-    
 }
 
 
 .vehicle-list {
     
     margin: 220px auto;
-    margin-left: 200px;
-    width: 500px;
+    margin-left: 400px;
+    width: 700px;
     background-color: white;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 400px;
+    height: 500px;
     overflow-x: hidden;
     overflow-y: auto;
     
@@ -24,11 +24,12 @@
 } 
 
 .table-items {
-    width: 90px;
+    width: 100px;
 }
  
-.add-btn {
+.vehicles-btn {
     position: inherit;
+    font-size: 15px;
     margin-bottom: 10px;
     margin-top: 10px;
 }

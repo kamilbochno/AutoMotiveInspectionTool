@@ -1,11 +1,11 @@
 .main-form {
     margin: 200 auto;
-    width: 800px;
+    width: 900px;
     background-color: white;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     
     border-radius: 10px;
-    height: 400px;
+    height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -14,7 +14,22 @@
     
     max-height: 500px;
     margin-left: 560px;
-    margin-top: 200px;
+    margin-top: 210px;
+    transform: translate(-50%, -50%);
+    width: 190px;
+    
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.vehicle-inputs2 {
+    position: absolute;
+    max-height: 500px;
+    margin-left: 320px;
+    margin-top: 114px;
     transform: translate(-50%, -50%);
     width: 190px;
     
@@ -26,7 +41,6 @@
 }
 
 
-
 .input-control {
    
     
@@ -34,12 +48,18 @@
 }
 
 
-
+.submit-btn {
+    
+    margin-top: -100px;
+    margin-left: 150px;
+    font-size: 17px;
+}
 
 #title {
     position: absolute;
-    margin-top: 20px;
-    margin-left: 120px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 290px;
 }
 
 
@@ -54,7 +74,8 @@
 }
 
 .upl {
-    
+    font-size: 13px;
+    margin-top: 20px;
     margin-right: 40px;
 }
 

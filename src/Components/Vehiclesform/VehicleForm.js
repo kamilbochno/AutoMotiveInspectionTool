@@ -14,18 +14,15 @@ class VehicleForm extends Component {
     
     
     
-    
 
     returnStateObject() {
         if (this.props.currentIndex === -1)
             return {
-                image: '',
                 id: '',
-                name: '',
-                model: '',
                 year: '',
-                color: '',
-                price: ''
+                price: '',
+                HP: ''
+            
             }
         else
             return this.props.list[this.props.currentIndex]
@@ -40,12 +37,19 @@ class VehicleForm extends Component {
 
     handleInputChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value,
-            carMake: brands?.[e.target.selectedIndex - 1]
+            [e.target.name]: e.target.value
             
         })
         
     }
+    handleSelectChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value,
+            carMake: brands?.[e.target.selectedIndex -1]
+        })
+    }
+    
+    
 
     handleSubmit = (e) => {
         e.preventDefault()
@@ -66,13 +70,7 @@ class VehicleForm extends Component {
                 <div className="img-upload">
                     <h6 className="upl">Upload image:</h6>
                     
-                    <Form.Group controlId="image"
-                    name="image"
-                    value={this.state.image}
-                    className="input-control"
-                    onChange={this.handleInputChange}>
-                    <Form.File id="exampleFormControlFile1" label="Example file input" />
-                    </Form.Group>
+                    <ImageUpload value={this.state.image}></ImageUpload>
                     
                     
                     
@@ -96,6 +94,7 @@ class VehicleForm extends Component {
                         className="input-control"
                         type="number"
                         min="0"
+                        max="1000"
                         required
                         name="id"
                         value={this.state.id}
@@ -112,9 +111,9 @@ class VehicleForm extends Component {
                         
                         value={this.state.name}
                         required
-                        onChange={this.handleInputChange}
+                        onChange={this.handleSelectChange}
                         >   
-                            <option selected disabled="true">--Select brand--</option>
+                            <option value="" selected disabled="true">--Select brand--</option>
                             {brands.map((carBrand, index) => {
                                 return <option>{carBrand.name}</option>
                             })}
@@ -131,11 +130,11 @@ class VehicleForm extends Component {
                         type="text"
                         name="model"
                         value={this.state.model}
-                        placeholder="Enter model of vehicle"
                         onChange={this.handleInputChange}
                         
+                        
                     >
-                        <option selected disabled="true">--Select model--</option>
+                        <option value="" selected disabled="true">--Select model--</option>
                         {this?.state?.carMake && this?.state?.carMake?.models.map((brandModel, index) => {
                             return <option>{brandModel}</option>
                         })
@@ -154,7 +153,8 @@ class VehicleForm extends Component {
                         required
                         className="input-control"
                         type="number"
-                        min="1950"
+                        min="1960"
+                        max="2022"
                         name="year"
                         value={this.state.year}
                         placeholder="Year of production"
@@ -170,7 +170,7 @@ class VehicleForm extends Component {
                         name="color"
                         value={this.state.color}
                         onChange={this.handleInputChange}>
-                            <option selected disabled="true">--Select color--</option>
+                            <option value="" selected disabled="true">--Select color--</option>
                             <option>Red</option>
                             <option>White</option>
                             <option>Green</option>
@@ -196,6 +196,7 @@ class VehicleForm extends Component {
                         className="input-control"
                         type="number"
                         min="0"
+                        max="10000000"
                         name="price"
                         value={this.state.price}
                         placeholder="Enter price of vehicle"
@@ -203,19 +204,123 @@ class VehicleForm extends Component {
                     />
                     
                 </Form.Group>   
+                <div className="vehicle-inputs2">
+                <Form.Group controlId="car_body">
+                    <Form.Label>Car body style: </Form.Label>
+                    <Form.Control as="select"
+                        required
+                        className="input-control"
+                        type="text"
+                        name="car_body"
+                        value={this.state.car_body}
+                        onChange={this.handleInputChange}>
+                        
+                        
+                        <option value="" selected disabled="true">--Select body style--</option>
+                        <option>Small car</option>
+                        <option>City car</option>
+                        <option>Compact</option>
+                        <option>Sedan</option>
+                        <option>Kombi</option>
+                        <option>Minivan</option>
+                        <option>SUV</option>
+                        <option>Cabriolet</option>
+                        <option>Coupe</option>
+                    </Form.Control>
+                        
+                    
+                </Form.Group>  
+                <Form.Group controlId="car_fuel">
+                    <Form.Label>Car fuel: </Form.Label>
+                    <Form.Control as="select"
+                        required
+                        className="input-control"
+                        type="text"
+                        name="car_fuel"
+                        value={this.state.car_fuel}
+                        onChange={this.handleInputChange}>
+                        
+                        
+                        <option value="" selected disabled="true">--Select fuel--</option>
+                        <option>Petrol</option>
+                        <option>Diesel</option>
+                        <option>Petrol + LPG</option>
+                        <option>Petrol + CNG</option>
+                        <option>Electric</option>
+                        <option>Ethanol</option>
+                        <option>Hybrid</option>
+                        <option>Hydrogen</option>
+                        
+                    </Form.Control>
+                        
+                    
+                </Form.Group> 
+                <Form.Group controlId="car_capacity">
+                    <Form.Label>Car engine capacity: </Form.Label>
+                    <Form.Control as="select"
+                        required
+                        className="input-control"
+                        type="text"
+                        name="car_capacity"
+                        value={this.state.car_capacity}
+                        onChange={this.handleInputChange}>
+                        
+                        
+                        <option value="" selected disabled="true">--Select engine capacity--</option>
+                        <option>750 cm3</option>
+                        <option>1000 cm3</option>
+                        <option>1200 cm3</option>
+                        <option>1300 cm3</option>
+                        <option>1400 cm3</option>
+                        <option>1500 cm3</option>
+                        <option>1600 cm3</option>
+                        <option>1700 cm3</option>
+                        <option>1800 cm3</option>
+                        <option>1900 cm3</option>
+                        <option>2000 cm3</option>
+                        <option>2200 cm3</option>
+                        <option>2500 cm3</option>
+                        <option>3000 cm3</option>
+                        <option>3200 cm3</option>
+                        <option>3500 cm3</option>
+                        <option>4000 cm3</option>
+                        <option>4500 cm3</option>
+                        <option>5000 cm3</option>
+                        <option>5500 cm3</option>
+                        <option>6000 cm3</option>
+                        
+                        
+                    </Form.Control>
+                </Form.Group> 
+                <Form.Group controlId="HP">
+                    <Form.Label>Engine Power: </Form.Label>
+                    <Form.Control
+                        className="input-control"
+                        type="number"
+                        min="20"
+                        max="700"
+                        required
+                        name="HP"
+                        value={this.state.HP}
+                        placeholder="Enter eng power"
+                        onChange={this.handleInputChange}
+                    />
+                </Form.Group>
+                </div>
                  
                 
-                <Button color="primary" className="submit-btn" type="submit">
-                     Submit
-                </Button> 
+                
                 
                 </div>
                            
                 
             
-                
+                <Button color="primary" className="submit-btn" type="submit">
+                     Submit
+                </Button> 
                 
                 </Form>
+                
                  </div> 
         );
     }

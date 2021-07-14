@@ -1,5 +1,6 @@
 .ImageUpload {
     
+    
     width: 350px;
     margin-left: -20px;
     height: auto;
@@ -30,6 +31,9 @@
 }
 
 .update-btn {
+    
     margin-right: 10px;
 }
+
+
 
