@@ -15,9 +15,11 @@ const Register = ({ submitForm }) => {
     
         <Container className="h-100">
         <Navigation></Navigation>
+        
         <div className="Register">
+        <h3>Sign up</h3>
         <Form onSubmit={handleSubmit} className="register-form">
-         <h3>Sign up</h3>
+        
          <Form.Group controlId="username">
                 <Form.Label>Username: </Form.Label>
                 <Form.Control 
