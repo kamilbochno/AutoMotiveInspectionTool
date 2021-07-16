@@ -1,5 +1,5 @@
 import './modal.css';
-import { Button, Modal } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import VehicleList from './Vehicles';
 import EditVehicle from '../Vehiclesform/EditVehicle';
 

@@ -11,10 +11,11 @@ const Delmodal = ({ handleClose, show, children }) => {
     <div className={showHideClassName}>
       <section className="modal-main">
       {children}
-        <Button className="M-close" onClick={handleClose}>
+      <div className="modalbtn">
+      <Button size="lg" className="M-close" onClick={handleClose}>
           Close
         </Button>
-        
+        </div>
         
       </section>
     </div>

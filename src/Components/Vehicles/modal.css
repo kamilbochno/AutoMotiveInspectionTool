@@ -4,35 +4,33 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
   }
   
   .modal-main {
-    position: fixed;
+    position: absolute;
     background: white;
-    width: 30%;
+    width: 50%;
     height: 150px;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
   }
-  .Head {
-    margin-left: 150px;
-    justify-content: center;
+  
+  .modalcontainer {
+    text-align: center;
     
+    margin-top: 10px;
   }
-  .M-description {
-    margin-left: 110px;
-  }
-  .M-btn {
-    font-size: 15px;
-    margin-right: 20px;
-    margin-top: 30px;
-    margin-left: 160px;
-  }
-  .M-close {
-    font-size: 15px;
-    margin-top: 30px;
+.M-btn {
+  margin-left: -70px;
+  
+}
+  .modalbtn {
+    
+    text-align: center;
+    margin-left: 80px;
+    margin-top: -31px;
   }
 
   .display-block {

@@ -157,13 +157,13 @@ class VehicleList extends Component {
                               </input> 
                               </div>
                                    
-                        
+                              
                         
                                 
                         {this.state.list.map((item, index) => {  
                             
                                 
-                                
+                            
                                             
                             
                             
@@ -188,6 +188,7 @@ class VehicleList extends Component {
                                 </tr>
                                 </thead>
                                 <tbody>
+                                
                                     <tr>
                                         
                                         <td>{item.id}</td>
@@ -205,30 +206,36 @@ class VehicleList extends Component {
                                 </tbody>
                                 
                                 <th><Button className="vehicles-btn" onClick={() => this.handleEdit(index)}>Edit</Button></th>
-                                <Delmodal show={this.state.show} handleClose={this.hideModal}>                  
-                                    <h1 className="Head">Confirmation</h1>
-                                    <p className="M-description">Are you sure to delete this vehicle?</p>
-                                    <Button className="M-btn" onClick={() => this.handleDelete(index)}>Delete</Button>
-                                </Delmodal>             
+                                           
                                 
                                 <th><Button className="vehicles-btn" onClick={this.showModal}>Delete</Button></th>
                                 
                                 
+                                
                                 <th><Button className="vehicles-btn" onClick={this.showInfoModal}>More</Button></th>
+                                <Delmodal show={this.state.show} handleClose={this.hideModal}>                  
+                                    <div className="modalcontainer">
+                                    <h1 className="Head">Confirmation</h1>
+                                     <p className="M-description">Are you sure to delete this vehicle?</p>
+                                     
+                                    <Button size="lg" className="M-btn" onClick={() => this.handleDelete(index)}>Delete</Button>
+                                    
+                                    </div>
+                                </Delmodal> 
                                 </Table>
                         
                                 
-                            
+                                   
                         })}
                                 <div>
                                 <Button className="vehicles-btn" onClick={this.submitForm.bind(this)} >Add vehicle</Button>
                                 </div>
                                 
-      
+                                
 
                     </div> 
-                       
-                    <Infomodal showinfo={this.state.showinfo} handleClose={this.hideModal}>
+                    
+                    <Infomodal showinfo={this.state.showinfo} handleClose={this.hideInfoModal}>
                                     <h1>Vehicle info</h1>
 
                                 </Infomodal>
