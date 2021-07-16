@@ -67,17 +67,16 @@ import styles from './VehicleForm.css';
         render() {
             
             return (
-                <div className="main">
+                <div className="main-vehicle">
                 <Loginnavigation></Loginnavigation>
                 
                 <div className="main-form">
                 <Form onSubmit={this.handleSubmit} autoComplete="off">
                
                 <h5 id="title">Fill inputs and submit to edit vehicle</h5>
-                    <div className="img-upload">
-                        <h6 className="upl">Upload image:</h6>
+                    
                         
-                        <ImageUpload value={this.state.image}></ImageUpload>
+                        
                         
                         
                         
@@ -87,7 +86,7 @@ import styles from './VehicleForm.css';
                             
                         
                         
-                    </div>
+                    
                     
                     <div className="vehicle-inputs1">
                     
