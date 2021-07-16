@@ -9,6 +9,7 @@ import useForm from './loginuseForm';
 
 
 
+
 const Login = ( { submitForm }) => {
     const { handleChange, handleSubmit, values, errors } = useForm(
         submitForm,
@@ -18,9 +19,9 @@ const Login = ( { submitForm }) => {
     
 
     return (
-        
+        <Container>   
     <div className="Login-page">
-    <Container className="h-100">
+    
     <Navigation></Navigation>
     
     <div className="Login">
@@ -61,9 +62,9 @@ const Login = ( { submitForm }) => {
 </Form>
     
     </div>
-    </Container>
-    </div>
     
+    </div>
+    </Container>
     );
 }
 

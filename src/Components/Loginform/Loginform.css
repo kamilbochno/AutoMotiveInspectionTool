@@ -16,14 +16,14 @@ body {
 }
 
 .Login-page {
-  height: 550px;
-  align-items: center;
+  height: 350px;
+  
 }
 
 .Login {
   
   
-  margin: 170 auto;
+  margin: 160 auto;
   
   width: 450px;
   background-color: white;
@@ -72,8 +72,8 @@ body {
  @media screen and (max-width: 430px) {
   .Login {
     margin-top: 130px;
-    width: 320px;
-    margin-left: 35px;
+    width: 350px;
+    margin-left: 20px;
     height: 400px;
   }
   .sign-in {
@@ -86,29 +86,30 @@ body {
 @media screen and (max-width: 420px) {
   .Login {
     height: 350px;
-    width: 320px;
-    margin-left: 10px;
+    width: 340px;
+    margin-left: 0px;
     margin-top: 170px;
   }
   .sign-in {
     position: absolute;
-    margin-top: 30px;
-    margin-left: 125px;
+    margin-top: 10px;
+    margin-left: 135px;
+    
+    
   }
 }
 
 @media screen and (max-width: 320px) {
+
   .Login-page {
-    width: 350px;
-    
+    height: 500px;
   }
-  
   .Login {
     
-    margin-left: 10px;
+    margin-left: -5px;
     width: 300px;
-    margin-top: 180px;
-    height: 300px;
+    margin-top: 160px;
+    height: 350px;
     
     
 
@@ -117,7 +118,7 @@ body {
   .sign-in {
     position: absolute;
     margin-top: 10px;
-    margin-left: 110px;
+    margin-left: 113px;
   }
 }
 
