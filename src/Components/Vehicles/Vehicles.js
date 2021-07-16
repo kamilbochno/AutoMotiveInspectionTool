@@ -2,11 +2,14 @@ import React, { Component, useState } from 'react'
 import EditVehicle from '../Vehiclesform/EditVehicle';
 import Loginnavigation from '../Loginpage/Loginnavigation';
 import { withRouter } from 'react-router-dom';
-import { Table, Button, Modal } from 'react-bootstrap';
+import { Table, Button, Container } from 'react-bootstrap';
 import Delmodal from './Modal';
-import Searchbar from './search';
+import Infomodal from './infomodal';
+
 import './Vehicles.css';
 import './modal.css';
+import { Children } from 'react';
+
 
 
 
@@ -15,21 +18,43 @@ import './modal.css';
 class VehicleList extends Component {
     state = {
         currentIndex: -1,
-        list: this.returnList(),
+        list: this.returnList(),  
+        search: ""
     }
+    
     
     
 
     showModal = () => {
         this.setState({
-            show: true
+            show: true,
+            
+
+            
         });
     };
+    showInfoModal = () => {
+        this.setState({
+            showinfo: true,
+            
+
+            
+            
+        })
+    }
 
     hideModal = () => {
-        this.setState({show: false});
+        this.setState({
+            show: false,
+            showinfo: false
+        });
     };
     
+    hideInfoModal = () => {
+        this.setState({
+            showinfo: false
+        })
+    }
 
     returnList() {
         if (localStorage.getItem('vehicles') == null)
@@ -76,14 +101,21 @@ class VehicleList extends Component {
         e.preventDefault()
         this.props.history.push('/Addvehicle');
     }
+
+     
+    onChange = e => {
+        this.setState({
+            search: e.target.value
+        })
+        
+    }    
+        
     
     render() { 
         
         
         
-        
-        
-
+       
         if(this.state.currentIndex !== -1) {
             return (
                 <div>
@@ -96,42 +128,68 @@ class VehicleList extends Component {
             )
         }
         
-         
+        
+        
+        
+            
+        
+        
+    
+
+        
+        
         
         return (
                     
             
-          
             
-
+            
             <div className="main-home">
+            
             <Loginnavigation></Loginnavigation>
 
            
          <div className="vehicle-list"> 
-            
+         
              <h3>List of vehicles</h3>  
-                         
-                        {this.state.list.map((item, index) => {
+             
+                          <div className="search-box"><input type="text" placeholder="Search..." onChange={this.onChange} value={this.state.search}>
+                              </input> 
+                              </div>
+                                   
+                        
+                        
+                                
+                        {this.state.list.map((item, index) => {  
+                            
+                                
+                                
+                                            
+                            
+                            
+                            
+                        
+                            
+        
                             return <Table responsive striped bordered hover horizontal key={index}>
                                 <thead>
                                 <tr>
-                                <th className="table-items">Image</th>
-                                <th className="table-items">id </th>
-                                <th className="table-items">name </th>
-                                <th className="table-items">model </th>
-                                <th className="table-items">year </th>
-                                <th className="table-items">color </th>
-                                <th className="table-items">price </th>
-                                <th className="table-items">car body </th>
-                                <th className="table-items">car fuel </th>
-                                <th className="table-items">car capacity </th>
-                                <th className="table-items">car hp </th>
+                                
+                                <th className="table-items">Id </th>
+                                <th className="table-items">Name </th>
+                                <th className="table-items">Model </th>
+                                <th className="table-items">Year </th>
+                                <th className="table-items">Color </th>
+                                <th className="table-items">Price </th>
+                                <th className="table-items">Car body </th>
+                                <th className="table-items">Car fuel </th>
+                                <th className="table-items">Car capacity </th>
+                                <th className="table-items">Car hp </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>{item.image}</td>
+                                        
                                         <td>{item.id}</td>
                                         <td>{item.name}</td>
                                         <td>{item.model}</td>
@@ -154,8 +212,11 @@ class VehicleList extends Component {
                                 </Delmodal>             
                                 
                                 <th><Button className="vehicles-btn" onClick={this.showModal}>Delete</Button></th>
+                                
+                                
+                                <th><Button className="vehicles-btn" onClick={this.showInfoModal}>More</Button></th>
                                 </Table>
-
+                        
                                 
                             
                         })}
@@ -165,10 +226,19 @@ class VehicleList extends Component {
                                 
       
 
-                    </div>    
-                    </div>
-            
+                    </div> 
+                       
+                    <Infomodal showinfo={this.state.showinfo} handleClose={this.hideModal}>
+                                    <h1>Vehicle info</h1>
+
+                                </Infomodal>
+                                
+                                </div>
+                                
+                    
+                    
         )
+        
     }
 }
 

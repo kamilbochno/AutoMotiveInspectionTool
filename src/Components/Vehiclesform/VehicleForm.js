@@ -63,14 +63,15 @@ class VehicleForm extends Component {
     render() {
         
         return (
+
+            <div className="main-vehicle">
             <div className="main-form">
             <Form onSubmit={this.handleSubmit} autoComplete="off">
            
             <h5 id="title">Fill inputs and submit to add new vehicle</h5>
-                <div className="img-upload">
-                    <h6 className="upl">Upload image:</h6>
+                
                     
-                    <ImageUpload value={this.state.image}></ImageUpload>
+                   
                     
                     
                     
@@ -79,8 +80,7 @@ class VehicleForm extends Component {
                         
                         
                     
-                    
-                </div>
+                
                 
                 <div className="vehicle-inputs1">
                 
@@ -322,6 +322,7 @@ class VehicleForm extends Component {
                 </Form>
                 
                  </div> 
+                 </div>
         );
     }
 }

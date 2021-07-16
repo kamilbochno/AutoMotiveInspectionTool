@@ -1,5 +1,6 @@
 import styles from '../Home/Home.css';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import users from '../Loginform/loginuseForm';
 export const Navigation = (props) => {
   return (
@@ -19,7 +20,7 @@ export const Navigation = (props) => {
                 <span className='icon-bar'></span>{' '}
                 <span className='icon-bar'></span>{' '}
               </button>
-              <a className='navbar-brand page-scroll' href='#page-top'>
+              <a className='navbar-brand page-scroll' href='/Loginpage#page-top'>
                 AutoMotiveInspectionTool
               </a>{' '}
             </div>
@@ -30,51 +31,41 @@ export const Navigation = (props) => {
             >
               <ul className='nav navbar-nav'>
                 <li>
-                  <a href='#features' className='page-scroll'>
+                  <a href='/Loginpage#features' className='page-scroll'>
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href='#about' className='page-scroll'>
+                  <a href='/Loginpage#about' className='page-scroll'>
                     About
                   </a>
                 </li>
                 <li>
-                  <a href='#services' className='page-scroll'>
+                  <a href='/Loginpage#services' className='page-scroll'>
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href='#portfolio' className='page-scroll'>
+                  <a href='/Loginpage#portfolio' className='page-scroll'>
                     Gallery
                   </a>
                 </li>
                 <li>
-                  <a href='#testimonials' className='page-scroll'>
+                  <a href='/Loginpage#testimonials' className='page-scroll'>
                     Testimonials
                   </a>
                 </li>
                 
                 <li>
-                  <a href='#contact' className='page-scroll'>
+                  <a href='/Loginpage#contact' className='page-scroll'>
                     Contact
                   </a>
                 </li>
                 
             </ul>
             <ul className='nav navbar-nav subpages'>
-                <li>
-                <NavLink activeClassName="active" to="/Login" className='page-scroll'>                 
-                  Sign in         
-                </NavLink> 
-      
-                </li>
-                <li>
-                <NavLink activeClassName="active" to="/Register" className='page-scroll'>
-                Sign up
-                    
-                 </NavLink> 
-                </li>
+                
+
                 <li>
                 <NavLink activeClassName="active" to="/Vehicles" className='page-scroll'>                 
                   Vehicles       

@@ -1,6 +1,15 @@
+.main-vehicle {
+    position: absolute;
+    height: 400px;
+    
+}
+
 .main-form {
-    margin: 200 auto;
-    width: 900px;
+    
+    width: 700px;
+    margin: 0 auto;
+    
+    
     background-color: white;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     
@@ -13,15 +22,15 @@
 .vehicle-inputs1 {
     
     max-height: 500px;
-    margin-left: 560px;
+    margin-left: 235px;
     margin-top: 210px;
     transform: translate(-50%, -50%);
-    width: 190px;
-    
+    width: 180px;
     
     
     display: flex;
     flex-direction: column;
+    
     
 }
 
@@ -50,8 +59,8 @@
 
 .submit-btn {
     
-    margin-top: -100px;
-    margin-left: 150px;
+    margin-top: -130px;
+    margin-left: 300px;
     font-size: 17px;
 }
 
@@ -59,25 +68,29 @@
     position: absolute;
     font-size: 15px;
     margin-top: 10px;
-    margin-left: 290px;
+    margin-left: 180px;
 }
 
-
-
-.img-upload {
-    position: absolute;
-    margin-top: 40px;
-    margin-left: 94px;
-    height: auto;
+@media only screen and (max-width: 1200px) {
+   
     
-    
+    .main-form {
+        align-items: center;
+        margin: 180px auto;
+        
+        width: 67%;
+        background-color: white;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+        
+        border-radius: 10px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.upl {
-    font-size: 13px;
-    margin-top: 20px;
-    margin-right: 40px;
-}
+
+
 
 
 
