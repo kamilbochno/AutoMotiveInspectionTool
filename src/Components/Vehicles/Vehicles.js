@@ -1,14 +1,14 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import EditVehicle from '../Vehiclesform/EditVehicle';
 import Loginnavigation from '../Loginpage/Loginnavigation';
 import { withRouter } from 'react-router-dom';
-import { Table, Button, Container } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import Delmodal from './Modal';
 import Infomodal from './infomodal';
 
 import './Vehicles.css';
 import './modal.css';
-import { Children } from 'react';
+
 
 
 
@@ -121,7 +121,7 @@ class VehicleList extends Component {
       
     
     render() { 
-        
+           
         
         
        
@@ -164,10 +164,8 @@ class VehicleList extends Component {
                               </input> 
                               </div>
                                    
-                              
-                        
-                                
-                        {this.state.list.map((item, index) => {  
+ 
+                        {this.state.list.filter(({name}) => name.toLowerCase().includes(this.state.search)).map((item, index) => {  
                             
                                 
                             
@@ -219,9 +217,11 @@ class VehicleList extends Component {
                                 </Delmodal> 
                                 </Table>
                         
-                                
-                                   
+                        
+                              
+                        
                         })}
+                    
                                 <div>
                                 <Button className="vehicles-btn" onClick={this.submitForm.bind(this)} >Add vehicle</Button>
                                 </div>

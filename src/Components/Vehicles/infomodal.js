@@ -1,7 +1,6 @@
 import './modal.css';
 import { Button } from 'react-bootstrap';
-import VehicleList from './Vehicles';
-import EditVehicle from '../Vehiclesform/EditVehicle';
+
 
 
 const Infomodal = ({ handleClose, showinfo,info }) => {
