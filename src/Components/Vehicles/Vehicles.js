@@ -77,14 +77,17 @@ class VehicleList extends Component {
         
     }
     
+    
+
     handleDelete = (index) => {
         
            
-         
+        
+        
         let list = this.returnList()
         list.splice(index, 1);
         localStorage.setItem('vehicles', JSON.stringify(list))
-        this.setState({ list, currentIndex: -1 })
+        this.setState({list, currentIndex: -1})
         this.hideModal()
         
         
@@ -153,7 +156,7 @@ class VehicleList extends Component {
            
          <div className="vehicle-list"> 
          
-             <h3>List of vehicles</h3>  
+             <h1>List of vehicles</h1>  
              
                           <div className="search-box"><input type="text" placeholder="Search..." onChange={this.onChange} value={this.state.search}>
                               
@@ -210,7 +213,7 @@ class VehicleList extends Component {
                                     <h1 className="Head">Confirmation</h1>
                                      <p className="M-description">Are you sure to delete this vehicle?</p>
                                      
-                                    <Button size="lg" className="M-btn" onClick={() => this.handleDelete(index)}>Delete</Button>
+                                    <Button size="lg" className="M-btn" onClick={() => this.handleDelete()}>Delete</Button>
                                     
                                     </div>
                                 </Delmodal> 

@@ -2,16 +2,30 @@
     
     position: absolute;
     height: 400px;
+        width: 100%;
+      /* Firefox */
+      display: -moz-box;
+      -moz-box-pack: center;
+      -moz-box-align: center;
+      /* Safari and Chrome */
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      /* W3C */
+      display: box;
+      box-pack: center;
+      box-align: center;
+        
     
     
 }
 
 
 .vehicle-list {
+    position: absolute;
+    margin:120px auto;
     
-    margin:140px auto;
-   
-    width: auto;
+    width: 700px;
     background-color: white;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
@@ -43,16 +57,15 @@
 @media only screen and (max-width: 1200px) {
     .vehicle-list {
     
-        margin: 180px auto;
+        margin: 130px auto;
         
         width: 67%;
         background-color: white;
         box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
         
         border-radius: 10px;
-        height: 400px;
-        overflow-x: hidden;
-        overflow-y: auto;
+        height: 500px;
+        
         
         
     
@@ -72,16 +85,15 @@
     
     .vehicle-list {
     
-        margin: 180px auto;
+        margin: 100px auto;
         
         width: 67%;
         background-color: white;
         box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
         
         border-radius: 10px;
-        height: 400px;
-        overflow-x: hidden;
-        overflow-y: auto;
+        height: 500px;
+        
         
         
     
