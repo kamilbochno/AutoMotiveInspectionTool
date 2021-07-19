@@ -17,6 +17,7 @@ import { Children } from 'react';
 
 class VehicleList extends Component {
     state = {
+        
         currentIndex: -1,
         list: this.returnList(),  
         search: ""
@@ -33,15 +34,20 @@ class VehicleList extends Component {
             
         });
     };
-    showInfoModal = () => {
+    showInfoModal = (index) => {  
+        
         this.setState({
             showinfo: true,
+            activeInfo: index,
             
-
             
             
+             
         })
-    }
+        
+    };
+            
+       
 
     hideModal = () => {
         this.setState({
@@ -52,9 +58,9 @@ class VehicleList extends Component {
     
     hideInfoModal = () => {
         this.setState({
-            showinfo: false
+            activeInfo: null
         })
-    }
+    };
 
     returnList() {
         if (localStorage.getItem('vehicles') == null)
@@ -109,7 +115,7 @@ class VehicleList extends Component {
         })
         
     }    
-        
+      
     
     render() { 
         
@@ -133,11 +139,7 @@ class VehicleList extends Component {
         
             
         
-        
-    
 
-        
-        
         
         return (
                     
@@ -154,6 +156,8 @@ class VehicleList extends Component {
              <h3>List of vehicles</h3>  
              
                           <div className="search-box"><input type="text" placeholder="Search..." onChange={this.onChange} value={this.state.search}>
+                              
+
                               </input> 
                               </div>
                                    
@@ -178,13 +182,7 @@ class VehicleList extends Component {
                                 <th className="table-items">Id </th>
                                 <th className="table-items">Name </th>
                                 <th className="table-items">Model </th>
-                                <th className="table-items">Year </th>
-                                <th className="table-items">Color </th>
-                                <th className="table-items">Price </th>
-                                <th className="table-items">Car body </th>
-                                <th className="table-items">Car fuel </th>
-                                <th className="table-items">Car capacity </th>
-                                <th className="table-items">Car hp </th>
+                                
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -194,13 +192,7 @@ class VehicleList extends Component {
                                         <td>{item.id}</td>
                                         <td>{item.name}</td>
                                         <td>{item.model}</td>
-                                        <td>{item.year}</td>
-                                        <td>{item.color}</td>
-                                        <td>{item.price}</td>
-                                        <td>{item.car_body}</td>
-                                        <td>{item.car_fuel}</td>
-                                        <td>{item.car_capacity}</td>
-                                        <td>{item.HP}</td>
+                                        
                                         
                                     </tr>
                                 </tbody>
@@ -212,7 +204,7 @@ class VehicleList extends Component {
                                 
                                 
                                 
-                                <th><Button className="vehicles-btn" onClick={this.showInfoModal}>More</Button></th>
+                                <th><Button className="vehicles-btn" onClick={() => this.showInfoModal(index)}>More</Button></th>
                                 <Delmodal show={this.state.show} handleClose={this.hideModal}>                  
                                     <div className="modalcontainer">
                                     <h1 className="Head">Confirmation</h1>
@@ -235,8 +227,12 @@ class VehicleList extends Component {
 
                     </div> 
                     
-                    <Infomodal showinfo={this.state.showinfo} handleClose={this.hideInfoModal}>
-                                    <h1>Vehicle info</h1>
+                    <Infomodal showinfo={this.state.showinfo} info={this.state.list[this.state.activeInfo]} handleClose={this.hideModal}>
+                                    
+                                    
+                                    
+                                    
+
 
                                 </Infomodal>
                                 
