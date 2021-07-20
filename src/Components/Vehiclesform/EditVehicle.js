@@ -3,9 +3,9 @@ import { Form, Button } from 'react-bootstrap';
 import { withRouter} from 'react-router-dom';
 import brands from './vehicles.json';
 import Loginnavigation from '../Loginpage/Loginnavigation';
-import ImageUpload from './ImageUpload';
 
-import styles from './VehicleForm.css';
+
+import './VehicleForm.css';
 
      class EditVehicle extends Component {
     
@@ -74,40 +74,11 @@ import styles from './VehicleForm.css';
                 <Form onSubmit={this.handleSubmit} autoComplete="off">
                
                 <h5 id="title">Fill inputs and submit to edit vehicle</h5>
-                    
-                        
-                        
-                        
-                        
-                        
-                            
-                            
-                            
-                            
-                        
-                        
-                    
-                    
+
                     <div className="vehicle-inputs1">
                     
+
                     
-                        
-                      
-                    
-                    <Form.Group controlId="id">
-                        <Form.Label>Id: </Form.Label>
-                        <Form.Control
-                            className="input-control"
-                            type="number"
-                            min="0"
-                            max="1000"
-                            required
-                            name="id"
-                            value={this.state.id}
-                            placeholder="Enter id"
-                            onChange={this.handleInputChange}
-                        />
-                    </Form.Group>
                     <Form.Group controlId="make">
                         <Form.Label>Brand: </Form.Label>
                         <Form.Control as="select"
@@ -136,9 +107,7 @@ import styles from './VehicleForm.css';
                             type="text"
                             name="model"
                             value={this.state.model}
-                            onChange={this.handleInputChange}
-                            
-                            
+                            onChange={this.handleInputChange}    
                         >
                             <option value="" selected disabled="true">--Select model--</option>
                             {this?.state?.carMake && this?.state?.carMake?.models.map((brandModel, index) => {

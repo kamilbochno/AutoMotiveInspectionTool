@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button} from 'react-bootstrap';
 import { withRouter} from 'react-router-dom';
 import brands from './vehicles.json';
-import ImageUpload from './ImageUpload';
-import styles from './VehicleForm.css';
+import './VehicleForm.css';
 
 class VehicleForm extends Component {
     

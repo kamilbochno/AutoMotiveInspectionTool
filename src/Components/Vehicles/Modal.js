@@ -1,6 +1,6 @@
 import './modal.css';
-import { Button, Modal } from 'react-bootstrap';
-import VehicleList from './Vehicles';
+import { Button } from 'react-bootstrap';
+
 
 
 const Delmodal = ({ handleClose, show, children, handleDelete}) => {

@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import VehicleForm from '../Vehiclesform/VehicleForm';
 import Loginnavigation from '../Loginpage/Loginnavigation';
 
-import ImageUpload from '../Vehiclesform/ImageUpload';
 
-import styles from './VehicleForm.css';
+import './VehicleForm.css';
 
 class VehicleList extends Component {
     state = {
@@ -34,7 +33,7 @@ class VehicleList extends Component {
     onAddOrEdit = (data) => {
         let list = this.returnList()
         if (this.state.currentIndex === -1)
-        list.push({...data, id:(list[list.length-1]?.id ?? -1) + 1})
+        list.push({...data, id:(list[list.length-1]?.id ?? 0) + 1})
         else
             list[this.state.currentIndex] = data
         localStorage.setItem('vehicles', JSON.stringify(list))

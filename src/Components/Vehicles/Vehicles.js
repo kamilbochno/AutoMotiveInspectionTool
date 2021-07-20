@@ -55,7 +55,7 @@ class VehicleList extends Component {
             showdelete: true,
             activeDel: index,
         })
-        console.log(this.state.index)
+        console.log(this.state.activeDel)
     };
 
     hideModal = () => {
@@ -110,7 +110,7 @@ class VehicleList extends Component {
     onAddOrEdit = (data) => {
         let list = this.returnList()
         if (this.state.currentIndex === -1) 
-            list.push({...data, id:(list[list.length-1]?.id ?? -1) + 1})
+            list.push({...data, id:(list[list.length-1]?.id ?? 0) + 1})
         else
             list[this.state.currentIndex] = data
             
@@ -209,7 +209,7 @@ class VehicleList extends Component {
                                 <th><Button className="vehicles-btn" onClick={() => this.handleEdit(index)}>Edit</Button></th>
                                         
                                 
-                                <th><Button className="vehicles-btn" onClick={this.showDeleteModal}>Delete</Button></th>
+                                <th><Button className="vehicles-btn" onClick={() => this.showDeleteModal(index)}>Delete</Button></th>
                                 
                                 
                                 
