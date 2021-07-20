@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Accordion, Card } from 'react-bootstrap';
+import { Form, Button} from 'react-bootstrap';
 import { withRouter} from 'react-router-dom';
 import brands from './vehicles.json';
 import ImageUpload from './ImageUpload';
@@ -8,7 +8,9 @@ import styles from './VehicleForm.css';
 class VehicleForm extends Component {
     
     state = {
-        ...this.returnStateObject()
+        
+        ...this.returnStateObject(),
+        
         
     }
     
@@ -22,7 +24,7 @@ class VehicleForm extends Component {
                 year: '',
                 price: '',
                 HP: ''
-            
+                
             }
         else
             return this.props.list[this.props.currentIndex]
@@ -30,14 +32,15 @@ class VehicleForm extends Component {
 
     componentDidUpdate(prevProps) {
         if (prevProps.currentIndex !== this.props.currentIndex || prevProps.list !== this.props.list) {
-            this.setState({ ...this.returnStateObject() })
+            this.setState({ ...this.returnStateObject(), })
             console.log(prevProps, this.props)
         }
     }
 
     handleInputChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+            
             
         })
         
@@ -45,63 +48,42 @@ class VehicleForm extends Component {
     handleSelectChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-            carMake: brands?.[e.target.selectedIndex -1]
+            carMake: brands?.[e.target.selectedIndex -1],
+            
         })
     }
     
     
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        this.props.onAddOrEdit(this.state)
-        this.props.history.push('/vehicles');
         
+        e.preventDefault()
+        this.props.onAddOrEdit(this.state)     
+        this.props.history.push('/vehicles');
+ 
     }
     
     
     
     render() {
         
+        
         return (
-
+            
             <div className="main-vehicle">
             <div className="main-form">
             <Form onSubmit={this.handleSubmit} autoComplete="off">
            
             <h5 id="title">Fill inputs and submit to add new vehicle</h5>
                 
-                    
-                   
-                    
-                    
-                    
-                        
-                        
-                        
-                        
-                    
-                
+   
                 
                 <div className="vehicle-inputs1">
                 
                 
-                    
                   
                 
-                <Form.Group controlId="id">
-                    <Form.Label>Id: </Form.Label>
-                    <Form.Control
-                        className="input-control"
-                        type="number"
-                        min="0"
-                        max="1000"
-                        required
-                        name="id"
-                        value={this.state.id}
-                        placeholder="Enter id"
-                        onChange={this.handleInputChange}
-                    />
-                </Form.Group>
+               
                 <Form.Group controlId="make">
                     <Form.Label>Brand: </Form.Label>
                     <Form.Control as="select"

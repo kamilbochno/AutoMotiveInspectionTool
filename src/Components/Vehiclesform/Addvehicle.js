@@ -34,7 +34,7 @@ class VehicleList extends Component {
     onAddOrEdit = (data) => {
         let list = this.returnList()
         if (this.state.currentIndex === -1)
-            list.push(data)
+        list.push({...data, id:(list[list.length-1]?.id ?? -1) + 1})
         else
             list[this.state.currentIndex] = data
         localStorage.setItem('vehicles', JSON.stringify(list))

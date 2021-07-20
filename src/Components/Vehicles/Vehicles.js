@@ -20,19 +20,22 @@ class VehicleList extends Component {
         
         currentIndex: -1,
         list: this.returnList(),  
-        search: ""
+        search: "",
+        
     }
     
     
     
 
     showModal = () => {
+        
         this.setState({
             show: true,
             
 
             
         });
+        
     };
     showInfoModal = (index) => {  
         
@@ -47,12 +50,19 @@ class VehicleList extends Component {
         
     };
             
-       
+    showDeleteModal = (index) => {  
+        this.setState({
+            showdelete: true,
+            activeDel: index,
+        })
+        console.log(this.state.index)
+    };
 
     hideModal = () => {
         this.setState({
             show: false,
-            showinfo: false
+            showinfo: false,
+            showdelete: false,
         });
     };
     
@@ -86,6 +96,7 @@ class VehicleList extends Component {
         
         let list = this.returnList()
         list.splice(index, 1);
+        console.log(index)
         localStorage.setItem('vehicles', JSON.stringify(list))
         this.setState({list, currentIndex: -1})
         this.hideModal()
@@ -98,10 +109,11 @@ class VehicleList extends Component {
 
     onAddOrEdit = (data) => {
         let list = this.returnList()
-        if (this.state.currentIndex === -1)
-            list.push(data)
+        if (this.state.currentIndex === -1) 
+            list.push({...data, id:(list[list.length-1]?.id ?? -1) + 1})
         else
             list[this.state.currentIndex] = data
+            
             localStorage.setItem('vehicles', JSON.stringify(list))
             this.setState({ list, currentIndex: -1 })
     }
@@ -114,9 +126,9 @@ class VehicleList extends Component {
      
     onChange = e => {
         this.setState({
-            search: e.target.value
+            search: e.target.value,
+            
         })
-        
     }    
       
     
@@ -165,15 +177,11 @@ class VehicleList extends Component {
                               </div>
                                    
  
-                        {this.state.list.filter(({name}) => name.toLowerCase().includes(this.state.search)).map((item, index) => {  
+                        {this.state.list.filter(({ name }) => name.toLowerCase().includes(this.state.search)).map((item, index) => {  
+                            
                             
                                 
-                            
-                                            
-                            
-                            
-                            
-                        
+                
                             
         
                             return <Table responsive striped bordered hover horizontal key={index}>
@@ -199,22 +207,14 @@ class VehicleList extends Component {
                                 </tbody>
                                 
                                 <th><Button className="vehicles-btn" onClick={() => this.handleEdit(index)}>Edit</Button></th>
-                                           
+                                        
                                 
-                                <th><Button className="vehicles-btn" onClick={this.showModal}>Delete</Button></th>
+                                <th><Button className="vehicles-btn" onClick={this.showDeleteModal}>Delete</Button></th>
                                 
                                 
                                 
                                 <th><Button className="vehicles-btn" onClick={() => this.showInfoModal(index)}>More</Button></th>
-                                <Delmodal show={this.state.show} handleClose={this.hideModal}>                  
-                                    <div className="modalcontainer">
-                                    <h1 className="Head">Confirmation</h1>
-                                     <p className="M-description">Are you sure to delete this vehicle?</p>
-                                     
-                                    <Button size="lg" className="M-btn" onClick={() => this.handleDelete()}>Delete</Button>
-                                    
-                                    </div>
-                                </Delmodal> 
+                                
                                 </Table>
                         
                         
@@ -229,7 +229,6 @@ class VehicleList extends Component {
                                 
 
                     </div> 
-                    
                     <Infomodal showinfo={this.state.showinfo} info={this.state.list[this.state.activeInfo]} handleClose={this.hideModal}>
                                     
                                     
@@ -238,6 +237,17 @@ class VehicleList extends Component {
 
 
                                 </Infomodal>
+                                <Delmodal show={this.state.showdelete} handleDelete={() => {
+                                                    this.handleDelete(this.state.activeDel)
+                                                }}
+                                                        handleClose={this.hideModal}>
+                                                    <div className="modalcontainer">
+                                                        <h1 className="Head">Confirmation</h1>
+                                                        <p className="M-description">Are you sure to delete this vehicle?</p>
+                                                    </div>
+                                    </Delmodal>  
+                    
+                               
                                 
                                 </div>
                                 

@@ -3,7 +3,7 @@ import { Button, Modal } from 'react-bootstrap';
 import VehicleList from './Vehicles';
 
 
-const Delmodal = ({ handleClose, show, children }) => {
+const Delmodal = ({ handleClose, show, children, handleDelete}) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
 
   return (
@@ -11,6 +11,8 @@ const Delmodal = ({ handleClose, show, children }) => {
     <div className={showHideClassName}>
       <section className="modal-main">
       {children}
+       <Button size="lg" className="M-btn" onClick={handleDelete}>Delete</Button>
+                                    
       <div className="modalbtn">
       <Button size="lg" className="M-close" onClick={handleClose}>
           Close
