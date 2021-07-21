@@ -48,6 +48,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
+    
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -57,43 +58,43 @@ body {
 
 
   .sign-in {
-    margin-left: 190px;
-    margin-top: 50px;
+    margin-left: 180px;
+    margin-top: 20px;
     position: absolute;
   
-    font-size: 24px;
+    font-size: 29px;
   }
 
  .Login p {
-      
-      margin-top: 5px;
+      font-size: 15px;
+      margin-top: 4px;
  }
  
  @media screen and (max-width: 430px) {
   .Login {
-    margin-top: 130px;
+    margin-top: 100px;
     width: 350px;
     margin-left: 20px;
-    height: 400px;
+    height: 500px;
   }
   .sign-in {
     position: absolute;
     margin-top: 30px;
-    margin-left: 125px;
+    margin-left: 130px;
   }
 }
 
 @media screen and (max-width: 420px) {
   .Login {
-    height: 350px;
+    height: 470px;
     width: 340px;
     margin-left: 0px;
-    margin-top: 170px;
+    margin-top: 140px;
   }
   .sign-in {
     position: absolute;
-    margin-top: 10px;
-    margin-left: 135px;
+    margin-top: 20px;
+    margin-left: 130px;
     
     
   }
@@ -109,11 +110,8 @@ body {
     margin-left: -5px;
     width: 300px;
     margin-top: 160px;
-    height: 350px;
+    height: 450px;
     
-    
-
-
   }
   .sign-in {
     position: absolute;
@@ -124,5 +122,5 @@ body {
 
 .test {
   margin-bottom: -15px;
-  font-size: 13px;
+  
 }

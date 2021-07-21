@@ -1,7 +1,7 @@
 
 
 .Register {
-    margin: 190px auto;
+    margin: 150px auto;
     width: 500px;
     background-color: white;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
@@ -30,8 +30,12 @@
   .Register h3 {
     position: absolute;
     font-size: 25px;
-    top: 5%;
+    margin-top: -5px;
     margin-left: 3%;
+  }
+
+  .Register p {
+    font-size: 15px;
   }
 #username {
   width: 200px;
@@ -44,17 +48,17 @@
 @media screen and (max-width: 430px) {
   .Register {
    
-    margin-top: 130px;
+    margin-top: 110px;
     width: 400px;
     margin-left: -2px;
-    height: 420px;
+    height: 450px;
   }
 }
 
 .Register h3 {
   position: absolute;
   font-size: 25px;
-  top: 5%;
+  margin-top: -5px;
   left: 42%;
 }
 
@@ -63,10 +67,10 @@
 
 @media screen and (max-width: 420px) {
   .Register {
-    height: 420px;
+    height: 460px;
     width: 350px;
     margin-left: -2px;
-    margin-top: 170px;
+    margin-top: 130px;
   }
 }
 .Register h3 {
@@ -74,6 +78,7 @@
   font-size: 25px;
   top: 5%;
   left: 39%;
+  
 }
 
 
@@ -89,8 +94,8 @@
     
     margin-left: -10px;
     width: 310px;
-    margin-top: 150px;
-    height: 420px;
+    margin-top: 140px;
+    height: 440px;
     
   }
 }

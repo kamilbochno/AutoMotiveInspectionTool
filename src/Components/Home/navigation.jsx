@@ -1,4 +1,4 @@
-import styles from './Home.css';
+import './Home.css';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = (props) => {
@@ -60,11 +60,12 @@ export const Navigation = (props) => {
                     Contact
                   </a>
                 </li>
+                
             </ul>
-            <ul className='nav navbar-nav subpages'>
+            <div className="nav navbar-nav">
                 <li>
                 <NavLink activeClassName="active" to="/Login" className='page-scroll'>                 
-                  Sign in         
+                    Sign in         
                 </NavLink> 
                 </li>
                 <li>
@@ -74,9 +75,11 @@ export const Navigation = (props) => {
                     
                  </NavLink> 
                 </li>
+                </div>
                 
                 
-              </ul>
+                
+              
             </div>
             
           </nav>

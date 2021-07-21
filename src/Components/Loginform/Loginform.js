@@ -30,8 +30,9 @@ const Login = ( { submitForm }) => {
        
         <Form onSubmit={handleSubmit} className="login-form">
             <Form.Group controlId="username">
-                <Form.Label>Username: </Form.Label>
+                <Form.Label><p>Username: </p></Form.Label>
                 <Form.Control
+                    size="lg"
                     type="text"
                     placeholder="Enter username"
                     name="username"
@@ -42,8 +43,9 @@ const Login = ( { submitForm }) => {
             </Form.Group>
 
             <Form.Group controlId="password">
-                <Form.Label>Password: </Form.Label>
+                <Form.Label><p>Password:</p> </Form.Label>
                 <Form.Control 
+                    size="lg"
                     type="password" 
                     name="password"
                     placeholder="Enter password"

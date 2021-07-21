@@ -21,8 +21,9 @@ const Register = ({ submitForm }) => {
         <Form onSubmit={handleSubmit} className="register-form">
         
          <Form.Group controlId="username">
-                <Form.Label>Username: </Form.Label>
+                <Form.Label><p>Username:</p> </Form.Label>
                 <Form.Control 
+                    size="lg"
                     type="text"
                     placeholder="Enter username" 
                     name="username"
@@ -33,8 +34,9 @@ const Register = ({ submitForm }) => {
                 
             </Form.Group>
             <Form.Group controlId="password">
-                <Form.Label>Password: </Form.Label>
+                <Form.Label><p>Password:</p> </Form.Label>
                 <Form.Control
+                    size="lg"
                     name="password"
                     type="password"
                     placeholder="Enter password"
@@ -45,8 +47,9 @@ const Register = ({ submitForm }) => {
                 
             </Form.Group>
             <Form.Group controlId="password">
-                <Form.Label>Confirm password: </Form.Label>
+                <Form.Label><p>Confirm password: </p> </Form.Label>
                 <Form.Control
+                    size="lg"
                     type="password" 
                     placeholder="Confirm password"
                     name="password2"
