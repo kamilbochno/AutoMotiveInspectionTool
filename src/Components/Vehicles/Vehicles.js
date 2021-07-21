@@ -205,16 +205,16 @@ class VehicleList extends Component {
                                         
                                     </tr>
                                 </tbody>
-                                
-                                <th><Button className="vehicles-btn" onClick={() => this.handleEdit(index)}>Edit</Button></th>
+                                <div>
+                                <Button className="edit-btn" size="lg" onClick={() => this.handleEdit(index)}>Edit</Button>
                                         
                                 
-                                <th><Button className="vehicles-btn" onClick={() => this.showDeleteModal(index)}>Delete</Button></th>
+                                <Button className="del-btn" size="lg" onClick={() => this.showDeleteModal(index)}>Delete</Button>
                                 
                                 
                                 
-                                <th><Button className="vehicles-btn" onClick={() => this.showInfoModal(index)}>More</Button></th>
-                                
+                                <Button className="more-btn" size="lg" onClick={() => this.showInfoModal(index)}>More</Button>
+                                </div>
                                 </Table>
                         
                         
