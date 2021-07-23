@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 import EditVehicle from '../Vehiclesform/EditVehicle';
 import Loginnavigation from '../Loginpage/Loginnavigation';
 import { withRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Table, Button } from 'react-bootstrap';
 import Delmodal from './Modal';
 import Infomodal from './infomodal';
+import InfoContext from './InfoContext';
+import { InfoProvider } from './InfoContext';
 
 import './Vehicles.css';
 import './modal.css';
@@ -13,11 +16,16 @@ import './modal.css';
 
 
 
+
     
 
+
+
 class VehicleList extends Component {
+     
+
     state = {
-        
+
         currentIndex: -1,
         list: this.returnList(),  
         search: "",
@@ -25,7 +33,7 @@ class VehicleList extends Component {
     }
     
     
-    
+   
 
     showModal = () => {
         
@@ -108,12 +116,15 @@ class VehicleList extends Component {
     
 
     onAddOrEdit = (data) => {
+        
         let list = this.returnList()
+        
         if (this.state.currentIndex === -1) 
             list.push({...data, id:(list[list.length-1]?.id ?? 0) + 1})
+         
+            
         else
             list[this.state.currentIndex] = data
-            
             localStorage.setItem('vehicles', JSON.stringify(list))
             this.setState({ list, currentIndex: -1 })
     }
@@ -130,11 +141,15 @@ class VehicleList extends Component {
             
         })
     }    
-      
+    
+    
     
     render() { 
-           
         
+         
+        <InfoProvider info={this.state.list}>
+         <Infomodal />
+        </InfoProvider>
         
        
         if(this.state.currentIndex !== -1) {
@@ -157,14 +172,14 @@ class VehicleList extends Component {
 
         
         return (
-                    
+                  
             
             
             
             <div className="main-home">
             
             <Loginnavigation></Loginnavigation>
-
+            
            
          <div className="vehicle-list"> 
          
@@ -175,8 +190,20 @@ class VehicleList extends Component {
 
                               </input> 
                               </div>
-                                   
- 
+                              <div className="styled-table">
+                              <Table>
+                              <thead >
+                                <tr> 
+                                
+                                <th className="table-items">Id </th>
+                                <th className="table-items">Name </th>
+                                <th className="table-items">Model </th>
+                                <th className="table-items">Year </th>
+                                
+                                </tr>
+                                </thead> 
+                                </Table>         
+                                </div>
                         {this.state.list.filter(({ name }) => name.toLowerCase().includes(this.state.search)).map((item, index) => {  
                             
                             
@@ -185,36 +212,26 @@ class VehicleList extends Component {
                             
         
                             return <Table responsive striped bordered hover horizontal key={index}>
-                                <thead>
-                                <tr>
                                 
-                                <th className="table-items">Id </th>
-                                <th className="table-items">Name </th>
-                                <th className="table-items">Model </th>
-                                
-                                </tr>
-                                </thead>
                                 <tbody>
                                 
-                                    <tr>
-                                        
-                                        <td>{item.id}</td>
-                                        <td>{item.name}</td>
-                                        <td>{item.model}</td>
+                                
+                                    <tr> 
+                                    
+                                    <a href="/Infomodal">
+                                        <td className="id">{item.id}</td>
+                                        <td className="name">{item.name}</td>
+                                        <td className="model">{item.model}</td>
+                                        <td className="year">{item.year}</td>
+                                    </a>    
+                                    
                                         
                                         
                                     </tr>
+                                       
                                 </tbody>
-                                <div>
-                                <Button className="edit-btn" size="lg" onClick={() => this.handleEdit(index)}>Edit</Button>
-                                        
                                 
-                                <Button className="del-btn" size="lg" onClick={() => this.showDeleteModal(index)}>Delete</Button>
-                                
-                                
-                                
-                                <Button className="more-btn" size="lg" onClick={() => this.showInfoModal(index)}>More</Button>
-                                </div>
+                               
                                 </Table>
                         
                         
@@ -229,14 +246,14 @@ class VehicleList extends Component {
                                 
 
                     </div> 
-                    <Infomodal showinfo={this.state.showinfo} info={this.state.list[this.state.activeInfo]} handleClose={this.hideModal}>
+                    
                                     
                                     
                                     
-                                    
+                                   
 
 
-                                </Infomodal>
+                                
                                 <Delmodal show={this.state.showdelete} handleDelete={() => {
                                                     this.handleDelete(this.state.activeDel)
                                                 }}
@@ -252,10 +269,12 @@ class VehicleList extends Component {
                                 </div>
                                 
                     
-                    
+                                            
         )
-        
+           
     }
+   
 }
+
 
 export default withRouter(VehicleList);
