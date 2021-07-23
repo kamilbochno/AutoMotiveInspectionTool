@@ -287,6 +287,7 @@ header .intro-text {
 	margin-left: 6px;
 	list-style: none;
 	padding: 0;
+	font-size: 15px;
 }
 #about .about-text li:before {
 	content: '\f00c';
@@ -306,6 +307,7 @@ header .intro-text {
 #about p {
 	line-height: 24px;
 	margin: 30px 0;
+	
 }
 /* Services Section */
 #services {
@@ -471,6 +473,9 @@ header .intro-text {
 }
 #contact form {
 	padding-top: 20px;
+	width: 600px;
+	
+	
 }
 #contact .text-danger {
 	color: #cc0033;
@@ -479,6 +484,7 @@ header .intro-text {
 #contact .btn-custom {
 	margin: 30px 0;
 	background: transparent;
+	color: #fff;
 	border: 2px solid #fff;
 }
 #contact .btn-custom:hover {
@@ -542,9 +548,11 @@ color: #777;
 	padding-top: 50px;
 	margin-top: 50px;
 	text-align: center;
+	margin-left: 20px;
 }
 #contact .social ul li {
 	display: inline-block;
+	
 	margin: 0 20px;
 }
 #contact .social i.fa {
@@ -553,10 +561,12 @@ color: #777;
 	height: 48px;
 	padding: 12px 0;
 	border: 2px solid #fff;
+	
 	color: #fff;
 	border-radius: 50%;
 	transition: all 0.3s;
 }
+
 #contact .social i.fa:hover {
 	color: #608dfd;
 	background: #fff;
