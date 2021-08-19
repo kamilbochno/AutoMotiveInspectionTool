@@ -1,0 +1,108 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    
+    
+    
+}
+
+.Login-page {
+    height: 350px;
+    
+}
+
+.Login {
+    
+    
+    margin: 160 auto;
+    
+    width: 450px;
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 10px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.login-form  {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+.sign-in {
+    margin-left: 180px;
+    margin-top: 20px;
+    position: absolute;
+    font-size: 29px;
+}
+
+.Login p {
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 430px) {
+.Login {
+    margin-top: 100px;
+    width: 350px;
+    margin-left: 20px;
+    height: 500px;
+}
+.sign-in {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+}
+
+@media screen and (max-width: 420px) {
+.Login {
+    height: 470px;
+    width: 340px;
+    margin-left: 0px;
+    margin-top: 140px;
+}
+
+.sign-in {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+.Login-page {
+    height: 500px;
+}
+.Login {
+    margin-left: -5px;
+    width: 300px;
+    margin-top: 160px;
+    height: 450px;
+}
+.sign-in {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 113px;
+}
+}
+
+.test {
+    margin-bottom: -15px;
+}
