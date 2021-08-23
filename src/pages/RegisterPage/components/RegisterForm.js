@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Container } from 'react-bootstrap';
+import { Form, Container } from 'react-bootstrap';
 import validate from './validateRegister';
 import useForm from './useRegisterForm';
 import './RegisterForm.css';
@@ -17,8 +17,8 @@ const Register = ({ submitForm }) => {
         <h3>Sign up</h3>
         <Form onSubmit={handleSubmit} className="register-form">
             <Form.Group controlId="username">
-                <Form.Label><p>Username:</p> </Form.Label>
-                <Form.Control 
+                <Form.Label><p className="regtitle">Username:</p> </Form.Label>
+                <Form.Control className="title2"
                     size="lg"
                     type="text"
                     placeholder="Enter username" 
@@ -29,8 +29,8 @@ const Register = ({ submitForm }) => {
                 {errors.username && <p className="validate">{errors.username}</p>}
             </Form.Group>
             <Form.Group controlId="password">
-                <Form.Label><p>Password:</p> </Form.Label>
-                <Form.Control
+                <Form.Label><p className="regtitle">Password:</p> </Form.Label>
+                <Form.Control className="title2"
                     size="lg"
                     name="password"
                     type="password"
@@ -41,8 +41,8 @@ const Register = ({ submitForm }) => {
                 {errors.password && <p className="validate">{errors.password}</p>}
             </Form.Group>
             <Form.Group controlId="password">
-                <Form.Label><p>Confirm password: </p> </Form.Label>
-                <Form.Control
+                <Form.Label><p className="regtitle2">Confirm password: </p> </Form.Label>
+                <Form.Control className="title2"
                     size="lg"
                     type="password" 
                     placeholder="Confirm password"
@@ -52,9 +52,9 @@ const Register = ({ submitForm }) => {
                 />
                 {errors.password2 && <p className="validate">{errors.password2}</p>}
             </Form.Group>
-            <Button size="lg" color="primary" type="submit">
+            <button className="btn" type="submit">
             Submit
-            </Button>
+            </button>
             <p>Already have an account? Login <a href="/Login">Here</a></p>
         </Form>
         </div>

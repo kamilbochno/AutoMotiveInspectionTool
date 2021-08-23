@@ -6,7 +6,7 @@
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 450px;
+    height: 550px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -34,7 +34,7 @@
 }
 
 .Register p {
-    font-size: 15px;
+    font-size: 14px;
 }
 #username {
     width: 200px;
@@ -43,13 +43,18 @@
 #password {
     width: 200px;
 }
-
+.regtitle {
+    margin-left: -130px;
+}
+.regtitle2 {
+    margin-left: -70px;
+}
 @media screen and (max-width: 430px) {
 .Register {
-    margin-top: 110px;
+    margin-top: 100px;
     width: 400px;
     margin-left: -2px;
-    height: 450px;
+    height: 550px;
 }
 }
 
@@ -65,10 +70,10 @@
 
 @media screen and (max-width: 420px) {
 .Register {
-    height: 460px;
+    height: 550px;
     width: 350px;
     margin-left: -2px;
-    margin-top: 130px;
+    margin-top: 100px;
 }
 }
 .Register h3 {
@@ -90,8 +95,8 @@
     
     margin-left: -10px;
     width: 310px;
-    margin-top: 140px;
-    height: 440px;
+    margin-top: 100px;
+    height: 550px;
     
 }
 }

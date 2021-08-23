@@ -13,7 +13,6 @@ import Blog1 from '../Home/assets/blog1.jpg';
 import Blog2 from '../Home/assets/blog2.jpg';
 import Blog3 from '../Home/assets/blog3.jpg';
 import Blog_img from '../Home/assets/blog_img.jfif';
-import Contact from '../Home/assets/contact.png';
 import Recent1 from '../Home/assets/recent1.jpg';
 import Recent2 from '../Home/assets/recent2.jpg';
 import { VscArrowUp } from 'react-icons/vsc';
@@ -29,7 +28,7 @@ import { IoTimerOutline } from 'react-icons/io5';
 import { IoCarSportOutline } from 'react-icons/io5';
 import { ContactForm } from './components/contact.js';
 import Navbar from './components/Navbar.jsx';
-
+import './Home.css';
 const Home = () => {
 return (
     <div className="Home" id="scroll">

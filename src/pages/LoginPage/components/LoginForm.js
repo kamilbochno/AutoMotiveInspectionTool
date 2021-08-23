@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Form, Button, Container } from 'react-bootstrap';
+import { Form, Container } from 'react-bootstrap';
 import './LoginForm.css';
 import validate from './validateLogin';
 import useForm from './useLoginForm';
@@ -22,8 +22,8 @@ const Login = ( { submitForm }) => {
         <h3 className="sign-in">Sign in</h3>
         <Form onSubmit={handleSubmit} className="login-form">
             <Form.Group controlId="username">
-                <Form.Label><p>Username: </p></Form.Label>
-                <Form.Control
+                <Form.Label><p className="title">Username: </p></Form.Label>
+                <Form.Control className="title2"
                     size="lg"
                     type="text"
                     placeholder="Enter username"
@@ -35,8 +35,8 @@ const Login = ( { submitForm }) => {
             </Form.Group>
 
             <Form.Group controlId="password">
-                <Form.Label><p>Password:</p> </Form.Label>
-                <Form.Control 
+                <Form.Label><p className="title">Password:</p> </Form.Label>
+                <Form.Control className="title2"
                     size="lg"
                     type="password" 
                     name="password"
@@ -48,9 +48,9 @@ const Login = ( { submitForm }) => {
             </Form.Group>
 
             
-            <Button size="lg" variant="primary" type="submit">
+            <button className="btn" type="submit">
             Submit
-            </Button>
+            </button>
             <p>Do not have an account? Register <a href="/Register">Here</a></p>
             <p className="test">Note: For test login use username: test password: 123</p>
         </Form>
