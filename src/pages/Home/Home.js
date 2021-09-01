@@ -29,11 +29,13 @@ import { IoCarSportOutline } from 'react-icons/io5';
 import { ContactForm } from './components/contact.js';
 import Navbar from './components/Navbar.jsx';
 import './Home.css';
+import IdleTimerContainer from '../LoggedIn/components/IdleTimerContainer';
 const Home = () => {
 return (
+    
     <div className="Home" id="scroll">
+        <IdleTimerContainer/>
         <div className="fixed-navbar">
-            <Navbar/>
         </div>
         <section className="hero hero-static-image-2">
             <div className="container">
@@ -76,7 +78,7 @@ return (
                             <div className="details">
                                 <p>Nullam tincidunt pellentesque nulla vitae imperdiet. Ut sit amet lorem dictum, efficitur justo ac, cursus turpis. Duis tempus elit et sapien posuere, at ultricies velit faucibus. Etiam elementum tempus sem, quis sodales metus scelerisque eget. Pellentesque ut sagittis nisi, a vehicula enim. Proin a suscipit urna.</p>
                                 <p>Suspendisse malesuada, orci cursus lacinia eleifend, magna tortor condimentum dolor, at interdum felis mi vitae tortor.</p>
-                                <a className="theme-btn-s3" href="/">Learn more</a>
+                                <a className="theme-btn-s3" href="#">Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -231,13 +233,13 @@ return (
                                 <div className="hx-team-img">
                                     <img src={Team1} alt=""/>
                                     <div className="SocialIcons">
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-facebook"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-twitter"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-google-plus"></i>
                                         </a>
                                     </div>
@@ -252,13 +254,13 @@ return (
                                 <div className="hx-team-img">
                                     <img src={Team2} alt=""/>
                                     <div className="SocialIcons">
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-facebook"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-twitter"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-google-plus"></i>
                                         </a>
                                     </div>
@@ -273,13 +275,13 @@ return (
                                 <div className="hx-team-img">
                                     <img src={Team3} alt=""/>
                                     <div className="SocialIcons">
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-facebook"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-twitter"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-google-plus"></i>
                                         </a>
                                     </div>
@@ -294,13 +296,13 @@ return (
                                 <div className="hx-team-img">
                                     <img src={Team4} alt=""/>
                                     <div className="SocialIcons">
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-facebook"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-twitter"></i>
                                         </a>
-                                        <a href="/">
+                                        <a href="#">
                                             <i className="fa fa-google-plus"></i>
                                         </a>
                                     </div>
@@ -332,12 +334,12 @@ return (
                                     </div>
                                     <div className="details">
                                         <h3>
-                                            <a href="/">Important tips for your favourite car.</a>
+                                            <a href="#">Important tips for your favourite car.</a>
                                         </h3>
                                         <ul className="entry-meta">
                                             <li>
                                                 <img src={Blog_img} alt=""/>
-                                                By <a href="/">Lilly Anne</a>
+                                                By <a href="#">Lilly Anne</a>
                                             </li>
                                             <li>October 15,2020</li>
                                         </ul>
@@ -349,12 +351,12 @@ return (
                                     </div>
                                     <div className="details">
                                         <h3>
-                                            <a href="/">Important tips for your favourite car.</a>
+                                            <a href="#">Important tips for your favourite car.</a>
                                         </h3>
                                         <ul className="entry-meta">
                                             <li>
                                                 <img src={Blog_img} alt=""/>
-                                                By <a href="/">Lilly Anne</a>
+                                                By <a href="#">Lilly Anne</a>
                                             </li>
                                             <li>October 15,2020</li>
                                         </ul>
@@ -366,12 +368,12 @@ return (
                                     </div>
                                     <div className="details">
                                         <h3>
-                                            <a href="/">Important tips for your favourite car.</a>
+                                            <a href="#">Important tips for your favourite car.</a>
                                         </h3>
                                         <ul className="entry-meta">
                                             <li>
                                                 <img src={Blog_img} alt=""/>
-                                                By <a href="/">Lilly Anne</a>
+                                                By <a href="#">Lilly Anne</a>
                                             </li>
                                             <li>October 15,2020</li>
                                         </ul>

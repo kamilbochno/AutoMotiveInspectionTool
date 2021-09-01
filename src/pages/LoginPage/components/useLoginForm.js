@@ -1,5 +1,7 @@
 import { useState, useEffect  } from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import { useAuthContext } from "../../../app/context/AuthContext";
+import { useLocation } from "react-router";
 
 const useForm = (callback, validate) => {
     const [values, setValues] = useState({
@@ -19,12 +21,21 @@ const useForm = (callback, validate) => {
     };
     const history = useHistory();
     
+    const { IsLoggedIn, setIsLoggedIn } = useAuthContext();
+    const location = useLocation();
+        
     const handleSubmit = e => {
+        if (IsLoggedIn) {
+            const { from } = location.state || { from: { pathname: "/"} };
+            history.replace(from);
+        }
         e.preventDefault();
         setErrors(validate(values));
         setIsSubmitting(true);
         if (values.username === "test" && values.password === "123") {
-                history.push("/Loginpage")
+                history.push("/user")
+                setIsLoggedIn(true)
+                window.localStorage.setItem('isLoggedIn', true);   
         }
     };
 

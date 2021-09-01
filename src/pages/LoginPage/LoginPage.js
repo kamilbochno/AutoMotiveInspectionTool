@@ -12,7 +12,7 @@ const ValidatedForm = () => {
     }
     return (
         <>
-        <Navbar/>
+        
         <LoginForm submitForm={submitForm} />
         </>
     );
