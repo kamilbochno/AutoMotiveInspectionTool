@@ -1,20 +1,17 @@
+
+
 .Dashboard-menu {
     position: absolute;
-    margin-top: 150px;
-    margin-left: 225px;
-    height: 100px;
-    width: 200px;
+    margin: 120px;
     
-    border: 1px solid gray;
-    box-shadow: 2px 2px 2px gray;
+    
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    
+    border-radius: 10px;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.Dashboard-items {
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 450px;
-    height: 500px;
-    width: 860px;
-    border: 1px solid gray;
-    box-shadow: 2px 2px 2px gray;
-}
