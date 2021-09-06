@@ -22,8 +22,8 @@
 
 
 .vehicle-list {
-    position: absolute;
-    margin:120px auto;
+    
+    margin:130px auto;
     
     width: 700px;
     background-color: white;
@@ -33,8 +33,15 @@
     height: 500px;
     overflow-x: hidden;
     overflow-y: auto;
-   
 } 
+
+
+
+th {
+    text-align: center;
+    
+}
+
 .vehicle-list h2 {
     margin-top: 20px;
 }
@@ -122,35 +129,17 @@
         margin-right: 10px;
 }
 
-.id {
-    text-align: center;
-    width: 100px;
-    
-    
-    
-}
 
-.name {
-    text-align: center;
-    width: 250px;
-}
 
-.model {
-    text-align: center;
-    width: 250px;
-}
-.styled-table{
+
+.styled_table{
     
-    width: 630;
+    width: 560px;
     margin-left: 0px;
     
     
 }
-.year {
-    text-align: center;
-    width: 150px;
-    
-}
+
 .table {
     
     border-collapse: collapse;
@@ -165,18 +154,15 @@
 }
 
 .table thead tr {
-    font-size: 15px;
+    font-size: 16px;
     background-color: #eb7d34;
     color: white;
-    text-align: center;
-}
-
-.table td {
-    font-size: 11px;
     
 }
 
-a {
-    color: inherit;
-    text-decoration: none !important;
+.table td {
+    font-size: 13px;
+    
+    
 }
+

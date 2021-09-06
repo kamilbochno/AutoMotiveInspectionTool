@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Table, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-
+import brands from '../../data/Vehicles/vehicles.json';
 const VehicleContext = React.createContext([]);
 
 export const VehicleProvider = ({ children }) => {
@@ -11,23 +11,32 @@ export const VehicleProvider = ({ children }) => {
     
     const [search, setSearch] = useState("")
     
+    
     const returnList = () => {
         if (localStorage.getItem('vehicles') == null)
             localStorage.setItem('vehicles', JSON.stringify([]))
         return JSON.parse(localStorage.getItem('vehicles'))
     }
-    const [list, setList] = useState([])
+    const [list, setList] = useState(returnList())
+    
     const returnStateObject = () => {
         if (currentIndex === -1)
             return {
-                id: '',
-                year: '',
-                price: '',
+                id:'' ,
+                name: '', 
+                make: '', 
+                year: '', 
+                color: '', 
+                price: '', 
+                body_style: '', 
+                fuel: '', 
+                capacity: '', 
                 HP: ''
             }
-        else return list[list.currentIndex]
+            else return list[currentIndex]
     }
-    const [stateObject, setStateObject] = useState(returnStateObject())
+    const [formData, setFormData] = useState("")
+    const [vehicles, setVehicles] = useState(returnStateObject)
     const handleEdit = (index) => {
         setCurrentIndex(index)
     }
@@ -38,7 +47,7 @@ export const VehicleProvider = ({ children }) => {
         this.setState({ list, currentIndex: -1 })
     }
     const onAddOrEdit = (data) => {
-        let list = returnList()
+        let list = returnList();
         if (currentIndex === -1)
             list.push({...data, id:(list[list.length-1]?.id ?? 0) + 1})
 
@@ -47,11 +56,7 @@ export const VehicleProvider = ({ children }) => {
             setList({ list })
             setCurrentIndex ({currentIndex: -1})
     }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        onAddOrEdit(stateObject)
-        history.push('/user/dashboard')
-    }
+    
     const onChange = e => {
         setSearch(e.target.value)
     }
@@ -61,6 +66,25 @@ export const VehicleProvider = ({ children }) => {
     }
     
     
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+    const handleSelectChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+            carMake: brands?.[e.target.selectedIndex - 1]
+        })
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        onAddOrEdit(formData)
+        history.push('/user/dashboard');
+
+    }
     
     const addVehicle = () => {
 
@@ -72,11 +96,8 @@ export const VehicleProvider = ({ children }) => {
 
     }
 
-    const vehicles = () => {
-        
-    }
     return (
-        <VehicleContext.Provider value={{ list, vehicles, addVehicle, editVehicle, removeVehicle, submitForm, handleSubmit }}>
+        <VehicleContext.Provider value={{ formData, list, vehicles, setVehicles, addVehicle, editVehicle, removeVehicle, submitForm, onAddOrEdit, handleInputChange, handleSelectChange, handleSubmit }}>
             {children}
         </VehicleContext.Provider>
     )

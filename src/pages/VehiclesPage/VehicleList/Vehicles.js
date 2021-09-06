@@ -3,7 +3,9 @@ import { useVehiclesContext } from '../../../app/context/VehicleContext';
 import { Table, Button } from 'react-bootstrap';
 import './Vehicles.css';
 const Vehicles = () => {
-    const { vehicles, list, onChange, search, submitForm } = useVehiclesContext()
+    const { formData, list, onChange, search, submitForm } = useVehiclesContext()
+    console.log(list)
+    
     return (
         <div className="main-home">
                 <div className="vehicle-list">
@@ -16,7 +18,7 @@ const Vehicles = () => {
                             value={search}>
                             </input>
                         </div>
-                        <div className="styled-table">
+                        <div className="styled_table">
                             <Table>
                                 <thead>
                                     <tr>
@@ -24,19 +26,21 @@ const Vehicles = () => {
                                         <th className="table-items">Name</th>
                                         <th className="table-items">Model</th>
                                         <th className="table-items">Year</th>
+                                        
                                     </tr>
                                 </thead>
                             </Table>
                         </div>
-                        {list.filter(({ name }) => name.toLowerCase().includes(search)).map((item, index) => {
+                        {list.map((item, index) => {
 
-                    return <Table responsive striped bordered hover horizontal>
+                            return <Table className="map_table" responsive striped bordered hover horizontal key={index}>
                                 <tbody>
                                     <tr>
                                         <td className="id">{item.id}</td>
                                         <td className="name">{item.name}</td>
                                         <td className="model">{item.model}</td>
                                         <td className="year">{item.year}</td>
+                                        <td><button>More</button></td>
                                     </tr>
                                 </tbody>
                             </Table>

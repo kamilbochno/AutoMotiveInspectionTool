@@ -2,23 +2,13 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import brands from '../../../data/Vehicles/vehicles.json';
 import { useVehiclesContext } from '../../../app/context/VehicleContext';
+import { useHistory } from 'react-router-dom';
 import './AddVehicle.css';
 const AddVehicle = () => {
-    const { handleSubmit, returnStateObject } = useVehiclesContext();
-    const [formData, setFormData] = useState("")
-    const handleInputChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        })
-    }
-    const handleSelectChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-            carMake: brands?.[e.target.selectedIndex - 1]
-        })
-    }
+    let history = useHistory();
+    const {onAddOrEdit,formData,handleSelectChange,handleInputChange, handleSubmit, vehicles, setVehicles, list } = useVehiclesContext();
+    
+    console.log(formData)
     return (
         <div className="main-vehicle">
             <div className="main-form">
@@ -68,7 +58,7 @@ const AddVehicle = () => {
                                 min="1960"
                                 max="2022"
                                 name="year"
-                                value={year}
+                                
                                 placeholder="Year of production"
                                 onChange={handleInputChange}
                             />
