@@ -1,0 +1,56 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-main {
+    position: absolute;
+    background: white;
+    width: 45%;
+    height: 150px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  .info-modal-main {
+    position: absolute;
+    background: white;
+    width: 35%;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .M-close {
+    margin-top: 1px;
+  }
+  .modalcontainer {
+    text-align: center;
+    
+    margin-top: 20px;
+  }
+.M-btn {
+  
+  margin-left: -70px;
+  
+}
+  .modalbtn {
+    
+    text-align: center;
+    margin-left: 90px;
+    margin-top: -31px;
+    
+  }
+
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }

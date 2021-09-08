@@ -18,10 +18,9 @@ const Routes = () => {
                     <Route exact path="/register" component={Register} />
                     <ProtectedRoute exact path="/user" component={Home} />
                     <ProtectedRoute exact path="/user/dashboard" component={Dashboard} />
-                    <ProtectedRoute exact path="/user/vehicles" component={Vehicles} />
                     <ProtectedRoute exact path="/user/vehicles/add" component={AddVehicle}/>
-                    <Route exact path="/app/vehicles/:id" component={Vehicle} />
-                    <ProtectedRoute exact path="/user/vehicles/:id/edit" component={EditVehicle} />
+                    <Route exact path="/vehicles/:id" component={Vehicle} />
+                    <ProtectedRoute exact path="/vehicles/:id/edit" component={EditVehicle} />
             </Switch>
         </div>
     )

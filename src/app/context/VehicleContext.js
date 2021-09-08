@@ -8,7 +8,8 @@ const VehicleContext = React.createContext([]);
 export const VehicleProvider = ({ children }) => {
     let history = useHistory();
     const [currentIndex, setCurrentIndex] = useState(-1)
-    
+    const [showDelete, setShowDelete] = useState(false)
+    const [activeDel, setActiveDel] = useState()
     const [search, setSearch] = useState("")
     
     
@@ -40,12 +41,6 @@ export const VehicleProvider = ({ children }) => {
     const handleEdit = (index) => {
         setCurrentIndex(index)
     }
-    const handleDelete = (index) => {
-        let list = returnList()
-        list.splice(index, 1);
-        localStorage.setItem('vehicles', JSON.stringify(list))
-        this.setState({ list, currentIndex: -1 })
-    }
     const onAddOrEdit = (data) => {
         let list = returnList();
         if (currentIndex === -1)
@@ -53,8 +48,8 @@ export const VehicleProvider = ({ children }) => {
 
         else list[currentIndex] = data
             localStorage.setItem('vehicles', JSON.stringify(list))
-            setList({ list })
-            setCurrentIndex ({currentIndex: -1})
+            setList( list )
+            setCurrentIndex (-1)
     }
     
     const onChange = e => {
@@ -85,19 +80,23 @@ export const VehicleProvider = ({ children }) => {
         history.push('/user/dashboard');
 
     }
-    
-    const addVehicle = () => {
-
+    const useList = () => {
+        if ( !list.name)
+            return null;
     }
     const editVehicle = () => {
 
     }
-    const removeVehicle = () => {
-
-    }
+        const handleDelete = (index) => {
+            let list = this.returnList()
+            list.splice(index, 1);
+            localStorage.setItem('vehicles', JSON.stringify(list))
+            setList (list)
+            setCurrentIndex (-1)
+        }
 
     return (
-        <VehicleContext.Provider value={{ formData, list, vehicles, setVehicles, addVehicle, editVehicle, removeVehicle, submitForm, onAddOrEdit, handleInputChange, handleSelectChange, handleSubmit }}>
+        <VehicleContext.Provider value={{showDelete, setShowDelete, useList, onChange, search, formData, list, vehicles, setVehicles, editVehicle, submitForm, onAddOrEdit, handleInputChange, handleSelectChange, handleSubmit }}>
             {children}
         </VehicleContext.Provider>
     )
