@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavItem } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { useVehiclesContext } from '../../../app/context/VehicleContext';
@@ -19,16 +19,28 @@ const Vehicle = () => {
     return (
         <div className="Vehicle_main">
                 <div className="vehicle">
-                <h1>Vehicle info:</h1>
-                <h2>Brand: {list[id - 1].name}</h2>
-                <h3>Model: {list[id - 1].model}</h3>
-                <p>Year of production: {list[id - 1].year}</p>
-                <p>Color: {list[id - 1].color}</p>
-                <p>Price: {list[id - 1].price} $</p>
-                <p>Body style: {list[id - 1].car_body}</p>
-                <p>Fuel type: {list[id - 1].car_fuel}</p>
-                <p>Engine capacity: {list[id - 1].car_capacity} </p>
-                <p>Engine power: {list[id - 1].HP} HP</p> 
+                    <div className="items">           
+                        <h5>Brand: </h5> 
+                        <h4>{list[id - 1].name}</h4>
+                        <h5>Model: </h5>
+                        <h4>{list[id - 1].model}</h4>
+                        <h6>Year of production: </h6>
+                        <h5>{list[id - 1].year}</h5>
+                        <h6>Color: </h6>
+                        <h5>{list[id - 1].color}</h5>
+                        <h6>Price: </h6>
+                        <h5>{list[id - 1].price} $</h5>
+                        <h6>Body style: </h6>
+                        <h5>{list[id - 1].car_body}</h5>
+                        <h6>Fuel type: </h6>
+                        <h5>{list[id - 1].car_fuel}</h5>
+                        <h6>Engine capacity: </h6>
+                        <h5>{list[id - 1].car_capacity}</h5>
+                        <h6>Engine power: </h6>
+                        <h5>{list[id - 1].HP} HP</h5> 
+                    </div>
+                <Button className="del-btn" onClick={setShowDelete(true)}>Delete</Button>
+                <Button className="del-btn" onClick={() => history.push(`/vehicles/${id}/edit`)}>Edit</Button>
                 </div>
                 <Delmodal show={showDelete}>
                     <div className="modalcontainer">
@@ -37,8 +49,7 @@ const Vehicle = () => {
                     </div>
 
                 </Delmodal>
-                <button onClick={setShowDelete(true)}>Delete</button>
-                <button onClick={() => history.push(`/vehicles/${id}/edit`)}>Edit</button>
+                
         </div>
     )
 }
