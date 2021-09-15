@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Logo from './assets/logo.png';
 import Hero_image from './assets/hero-image.jpg';
 import About_image from './assets/about.jpg';
@@ -27,32 +26,30 @@ import { BsFillPeopleFill } from 'react-icons/bs';
 import { IoTimerOutline } from 'react-icons/io5';
 import { IoCarSportOutline } from 'react-icons/io5';
 import { ContactForm } from './components/contact.js';
-import Navbar from './components/Navbar.jsx';
 import './Home.css';
 import IdleTimerContainer from '../LoggedIn/components/IdleTimerContainer';
 const Home = () => {
 return (
-    
-    <div className="Home" id="scroll">
-        <IdleTimerContainer/>
-        <div className="fixed-navbar">
-        </div>
-        <section className="hero hero-static-image-2">
-            <div className="container">
-                <div className="row">
-                    <div className="col col-lg-6 col-md-7 slide-caption">
-                        <div className="slide-title">
-                            <h2>
-                                Best Car Repairing Services
-                                </h2>
-                            </div>
-                            <div className="slide-subtitle">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt sem a diam interdum laoreet. Vestibulum quis velit mauris.</p>
-                            </div>
-                            <div className="btns">
-                                <a className="theme-btn-s2" href="#contact">
-                                    Contact Us
-                                </a>
+  <div className="Home" id="scroll">
+    <IdleTimerContainer/>
+    <div className="fixed-navbar">
+      </div>
+      	<section className="hero hero-static-image-2">
+          <div className="container">
+              <div className="row">
+                  <div className="col col-lg-6 col-md-7 slide-caption">
+                      <div className="slide-title">
+                          <h2>
+                            Best Car Repairing Services
+                          </h2>
+                      </div>
+                      <div className="slide-subtitle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt sem a diam interdum laoreet. Vestibulum quis velit mauris.</p>
+                      </div>
+                      <div className="btns">
+                            <a className="theme-btn-s2" href="#contact">
+                                Contact Us
+                            </a>
                             </div>
                             <div className="hero-image-2">
                                 <img src={Hero_image} alt=""></img>

@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import Client1 from "../assets/client1.png";
 import Client2 from "../assets/client2.png";
 import Client3 from "../assets/client3.png";
-
 export default class ClientSlider extends Component {
 render() {
     const settings = {

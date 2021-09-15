@@ -5,17 +5,15 @@ import useForm from './useRegisterForm';
 import './RegisterForm.css';
 
 const Register = ({ submitForm }) => {
-    const { handleChange, handleSubmit, values, errors } = useForm(
-        submitForm,
-        validate
-    );
-
-    return (
-    
-        <Container className="h-100">
-        <div className="Register">
+const { handleChange, handleSubmit, values, errors } = useForm(
+      submitForm,
+      validate
+);
+	return (
+    <Container className="h-100">
+      <div className="Register">
         <h3>Sign up</h3>
-        <Form onSubmit={handleSubmit} className="register-form">
+        	<Form onSubmit={handleSubmit} className="register-form">
             <Form.Group controlId="username">
                 <Form.Label><p className="regtitle">Username:</p> </Form.Label>
                 <Form.Control className="title2"
@@ -52,14 +50,14 @@ const Register = ({ submitForm }) => {
                 />
                 {errors.password2 && <p className="validate">{errors.password2}</p>}
             </Form.Group>
-            <button className="btn" type="submit">
-            Submit
-            </button>
-            <p>Already have an account? Login <a href="/Login">Here</a></p>
-        </Form>
-        </div>
-        </Container>
-    );
+							<button className="btn" type="submit">
+							Submit
+							</button>
+							<p>Already have an account? Login <a href="/Login">Here</a></p>
+        	</Form>
+      </div>
+    </Container>
+	);
 }
 
 export default Register;

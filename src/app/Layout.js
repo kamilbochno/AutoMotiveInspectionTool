@@ -11,14 +11,12 @@ const Layout = ({children}) => {
         localStorage.setItem('isLoggedIn', isLoggedIn)
     }, [isLoggedIn])
     return (
-        
         <VehicleProvider>
         {console.log(localStorage.getItem('isLoggedIn'))}
         {isLoggedIn ? <LoggedNavbar/> : <Navbar/>}
         {children}
         </VehicleProvider>
     )
-
 }
 
 export default Layout;

@@ -1,49 +1,36 @@
 .Vehicle_main {
-    
-    position: absolute;
-    height: 400px;
-        width: 100%;
-      /* Firefox */
-      display: -moz-box;
-      -moz-box-pack: center;
-      -moz-box-align: center;
-      /* Safari and Chrome */
-      display: -webkit-box;
-      -webkit-box-pack: center;
-      -webkit-box-align: center;
-      /* W3C */
-      display: box;
-      box-pack: center;
-      box-align: center;
-        
-    
-    
+	position: absolute;
+  height: 400px;
+  width: 100%;
+  /* Firefox */
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* Safari and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* W3C */
+  display: box;
+  box-pack: center;
+  box-align: center;
 }
-
-.vehicle {
-    
-    margin:200px auto;
-    
-    width: 700px;
-    background-color: white;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    height: 700px;
-    
+.vehicle {   
+  margin:200px auto;
+	width: 700px;
+	background-color: white;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	height: 700px;
 } 
-
 .del-btn {
-    margin-top: 35px;
-    margin-left: 30px;
-    margin-right: 50px;
-    font-size: 16px;
-    padding: 10px 30px;
-    
+	margin-top: 35px;
+	margin-left: 30px;
+	margin-right: 50px;
+	font-size: 16px;
+	padding: 10px 30px;  
 }
-
-.items {
-    
-    margin-top: 20px;
-    font-family:'Times New Roman', Times, serif;
-    
+.items {   
+	margin-top: 20px;
+	font-family:'Times New Roman', Times, serif;
 }

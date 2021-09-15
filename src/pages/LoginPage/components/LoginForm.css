@@ -1,40 +1,29 @@
 
-  
-  .Login-page {
-    height: 450px;
-    
-    
-  
-  }
+.Login-page {
+  height: 450px;
+}
 .title2 {
   font-size: 16px;
 }
 .title {
   font-weight: 500;
-  
 }
-  .Login {
-    
-    
-    margin: 120 auto;
-    
-    width: 450px;
-    background-color: white;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-    position: relative;
-    border-radius: 10px;
-    height: 550px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  
-    
+.Login {
+  margin: 120 auto;
+  width: 450px;
+  background-color: white;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 550px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .title {
-    margin-left: -120px;
-    
+  margin-left: -120px;
 }
 .btn {
-    background-color: #ed5217;
+  background-color: #ed5217;
   color: #fdf0eb;
   font-weight: 700;
   padding: 13px 38px;
@@ -47,89 +36,72 @@
 .btn:focus,
 .btn:hover
 {
-    background-color: #fdf0eb;
-    color: #ed5217;
+  background-color: #fdf0eb;
+  color: #ed5217;
 }
-
-  .login-form  {
-    
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 200px;
-      
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  
-  
-    .sign-in {
-      margin-left: 180px;
-      margin-top: 20px;
-      position: absolute;
-    
-      font-size: 29px;
-    }
-  
-   .Login p {
-        font-size: 15px;
-        margin-top: 2px;
-   }
-   
-   @media screen and (max-width: 430px) {
-    .Login {
+.login-form  {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in {
+  margin-left: 180px;
+  margin-top: 20px;
+  position: absolute;
+  font-size: 29px;
+}  
+.Login p {
+  font-size: 15px;
+  margin-top: 2px;
+}
+@media screen and (max-width: 430px) {
+  .Login {
       margin-top: 100px;
       width: 350px;
       margin-left: 20px;
       height: 550px;
-    }
-    .sign-in {
+  }
+  .sign-in {
       position: absolute;
       margin-top: 30px;
       margin-left: 130px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .Login {
+    height: 550px;
+    width: 340px;
+    margin-left: 0px;
+    margin-top: 100px;
+  }
+  .sign-in {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 130px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .Login-page {
+    height: 550px;
+  }
+  .Login {
+    margin-left: -5px;
+    width: 300px;
+    margin-top: 100px;
+    height: 550px;
+    }
+  .sign-in {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 113px;
     }
   }
-  
-  @media screen and (max-width: 420px) {
-    .Login {
-      height: 550px;
-      width: 340px;
-      margin-left: 0px;
-      margin-top: 100px;
-    }
-    .sign-in {
-      position: absolute;
-      margin-top: 20px;
-      margin-left: 130px;
-      
-      
-    }
-  }
-  
-  @media screen and (max-width: 320px) {
-  
-    .Login-page {
-      height: 550px;
-    }
-    .Login {
-      
-      margin-left: -5px;
-      width: 300px;
-      margin-top: 100px;
-      height: 550px;
-      
-    }
-    .sign-in {
-      position: absolute;
-      margin-top: 10px;
-      margin-left: 113px;
-    }
-  }
-  
   .test {
-    margin-bottom: -15px;
-    
+    margin-bottom: -15px;  
   }

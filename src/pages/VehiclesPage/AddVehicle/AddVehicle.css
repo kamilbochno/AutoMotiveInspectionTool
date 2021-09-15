@@ -1,364 +1,242 @@
 @media only screen and (min-width: 1091px) {
-    .main-vehicle {
-        width: 100%;
-      /* Firefox */
-      display: -moz-box;
-      -moz-box-pack: center;
-      -moz-box-align: center;
-      /* Safari and Chrome */
-      display: -webkit-box;
-      -webkit-box-pack: center;
-      -webkit-box-align: center;
-      /* W3C */
-      display: box;
-      box-pack: center;
-      box-align: center;
-        
-        
-    }
-    
-    .main-form {
-        
-        
-        width: 600px;
-        margin-top: 150px;
-        
-    
-        
-        
-        background-color: white;
-        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-        
-        border-radius: 10px;
-        height: 550px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .vehicle-inputs1 {
-        
-        max-height: 500px;
-        margin-left: 205px;
-        margin-top: 230px;
-        transform: translate(-50%, -50%);
-        width: 180px;
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-        
-    }
-    
-    .vehicle-inputs2 {
-        position: absolute;
-        max-height: 500px;
-        margin-left: 300px;
-        margin-top: 129px;
-        transform: translate(-50%, -50%);
-        width: 190px;
-        
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    
-    .input-control {
-       
-        
-        display: block;
-    }
-    
-    
-    .submit-btn {
-        
-        margin-top: -130px;
-        margin-left: 215px;
-        font-size: 17px;
-    }
-    
-    #title {
-        position: absolute;
-        font-size: 15px;
-        margin-top: 10px;
-        margin-left: 160px;
-    }
+.main-vehicle {
+	width: 100%;
+	/* Firefox */
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	/* Safari and Chrome */
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	/* W3C */
+	display: box;
+	box-pack: center;
+	box-align: center;
 }
-
-
+.main-form {
+	width: 600px;
+	margin-top: 150px;
+	background-color: white;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	height: 550px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.vehicle-inputs1 {
+	max-height: 500px;
+	margin-left: 205px;
+	margin-top: 230px;
+	transform: translate(-50%, -50%);
+	width: 180px;
+	display: flex;
+	flex-direction: column;
+}
+.vehicle-inputs2 {
+	position: absolute;
+	max-height: 500px;
+	margin-left: 300px;
+	margin-top: 129px;
+	transform: translate(-50%, -50%);
+	width: 190px;
+	display: flex;
+	flex-direction: column;
+}
+.input-control { 
+	display: block;
+}    
+.submit-btn {
+	margin-top: -130px;
+	margin-left: 215px;
+	font-size: 17px;
+}   
+#title {
+	position: absolute;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-left: 160px;
+}
+}
 @media only screen and (max-width: 1090px) {
-    .main-vehicle {
-        width: 100%;
-      /* Firefox */
-      display: -moz-box;
-      -moz-box-pack: center;
-      -moz-box-align: center;
-      /* Safari and Chrome */
-      display: -webkit-box;
-      -webkit-box-pack: center;
-      -webkit-box-align: center;
-      /* W3C */
-      display: box;
-      box-pack: center;
-      box-align: center;
-        
-        
-    }
-    
-    .main-form {
-        
-        
-        width: 700px;
-        margin-top: 110px;
-        
-    
-        
-        
-        background-color: white;
-        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-        
-        border-radius: 10px;
-        height: 500px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .vehicle-inputs1 {
-        
-        max-height: 500px;
-        margin-left: 235px;
-        margin-top: 210px;
-        transform: translate(-50%, -50%);
-        width: 180px;
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-        
-    }
-    
-    .vehicle-inputs2 {
-        position: absolute;
-        max-height: 500px;
-        margin-left: 320px;
-        margin-top: 129px;
-        transform: translate(-50%, -50%);
-        width: 190px;
-        
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    
-    .input-control {
-       
-        
-        display: block;
-    }
-    
-    
-    .submit-btn {
-        
-        margin-top: -130px;
-        margin-left: 300px;
-        font-size: 17px;
-    }
-    
-    #title {
-        position: absolute;
-        font-size: 15px;
-        margin-top: 10px;
-        margin-left: 190px;
-    }
+.main-vehicle {
+	width: 100%;
+	/* Firefox */
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	/* Safari and Chrome */
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	/* W3C */
+	display: box;
+	box-pack: center;
+	box-align: center;
+}    
+.main-form {
+	width: 700px;
+	margin-top: 110px;
+	background-color: white;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	height: 500px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}    
+.vehicle-inputs1 {
+	max-height: 500px;
+	margin-left: 235px;
+	margin-top: 210px;
+	transform: translate(-50%, -50%);
+	width: 180px;
+	display: flex;
+	flex-direction: column;
+}    
+.vehicle-inputs2 {
+	position: absolute;
+	max-height: 500px;
+	margin-left: 320px;
+	margin-top: 129px;
+	transform: translate(-50%, -50%);
+	width: 190px;
+	display: flex;
+	flex-direction: column;
 }
-    
-    
-
-
-
+.input-control {       
+	display: block;
+}
+.submit-btn {        
+	margin-top: -130px;
+	margin-left: 300px;
+	font-size: 17px;
+}
+#title {
+	position: absolute;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-left: 190px;
+}
+}    
 @media only screen and (max-width: 768px) {
-    .main-vehicle {
-        width: 100%;
-      /* Firefox */
-      display: -moz-box;
-      -moz-box-pack: center;
-      -moz-box-align: center;
-      /* Safari and Chrome */
-      display: -webkit-box;
-      -webkit-box-pack: center;
-      -webkit-box-align: center;
-      /* W3C */
-      display: box;
-      box-pack: center;
-      box-align: center;
-        
-        
-    }
-    
-    .main-form {
-        
-        margin-left: -5px;
-        width: 425px;
-        margin-top: 110px;
-        
-    
-        
-        
-        background-color: white;
-        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-        
-        border-radius: 10px;
-        height: 500px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .vehicle-inputs1 {
-        
-        max-height: 500px;
-        margin-left: 135px;
-        margin-top: 210px;
-        transform: translate(-50%, -50%);
-        width: 120px;
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-        
-    }
-    
-    .vehicle-inputs2 {
-        position: absolute;
-        max-height: 500px;
-        margin-left: 220px;
-        margin-top: 139px;
-        transform: translate(-50%, -50%);
-        width: 120px;
-        
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    
-    .input-control {
-       
-        
-        display: block;
-    }
-    
-    
-    .submit-btn {
-        
-        margin-top: -130px;
-        margin-left: 150px;
-        font-size: 14px;
-    }
-    
-    #title {
-        position: absolute;
-        font-size: 15px;
-        margin-top: 15px;
-        margin-left: 70px;
-    }
+.main-vehicle {
+	width: 100%;
+	/* Firefox */
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	/* Safari and Chrome */
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	/* W3C */
+	display: box;
+	box-pack: center;
+	box-align: center;
 }
-
+.main-form {        
+	margin-left: -5px;
+	width: 425px;
+	margin-top: 110px;
+	background-color: white;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	height: 500px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}    
+.vehicle-inputs1 {
+	max-height: 500px;
+	margin-left: 135px;
+	margin-top: 210px;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	display: flex;
+	flex-direction: column;
+}    
+.vehicle-inputs2 {
+	position: absolute;
+	max-height: 500px;
+	margin-left: 220px;
+	margin-top: 139px;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	display: flex;
+	flex-direction: column;
+}       
+.input-control {
+	display: block;
+}
+.submit-btn {        
+	margin-top: -130px;
+	margin-left: 150px;
+	font-size: 14px;
+}    
+#title {
+	position: absolute;
+	font-size: 15px;
+	margin-top: 15px;
+	margin-left: 70px;
+}
+}
 @media only screen and (max-width: 430px) {
-    .main-vehicle {
-        width: 100%;
-      /* Firefox */
-      display: -moz-box;
-      -moz-box-pack: center;
-      -moz-box-align: center;
-      /* Safari and Chrome */
-      display: -webkit-box;
-      -webkit-box-pack: center;
-      -webkit-box-align: center;
-      /* W3C */
-      display: box;
-      box-pack: center;
-      box-align: center;
-        
-        
-    }
-    
-    .main-form {
-        
-        margin-left: 0px;
-        width: 320px;
-        margin-top: 110px;
-        
-    
-        
-        
-        background-color: white;
-        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-        
-        border-radius: 10px;
-        height: 500px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .vehicle-inputs1 {
-        
-        max-height: 500px;
-        margin-left: 75px;
-        margin-top: 210px;
-        transform: translate(-50%, -50%);
-        width: 120px;
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-        
-    }
-    
-    .vehicle-inputs2 {
-        position: absolute;
-        max-height: 500px;
-        margin-left: 220px;
-        margin-top: 129px;
-        transform: translate(-50%, -50%);
-        width: 120px;
-        
-        
-        
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    
-    .input-control {
-       
-        
-        display: block;
-    }
-    
-    
-    .submit-btn {
-        
-        margin-top: -130px;
-        margin-left: 100px;
-        font-size: 12px;
-    }
-    
-    #title {
-        position: absolute;
-        font-size: 13px;
-        margin-top: 15px;
-        margin-left: 35px;
-    }
+.main-vehicle {
+	width: 100%;
+	/* Firefox */
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	/* Safari and Chrome */
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	/* W3C */
+	display: box;
+	box-pack: center;
+	box-align: center;
+}    
+.main-form {      
+	margin-left: 0px;
+	width: 320px;
+	margin-top: 110px;
+	background-color: white;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	height: 500px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}   
+.vehicle-inputs1 {        
+	max-height: 500px;
+	margin-left: 75px;
+	margin-top: 210px;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	display: flex;
+	flex-direction: column;
+}  
+.vehicle-inputs2 {
+	position: absolute;
+	max-height: 500px;
+	margin-left: 220px;
+	margin-top: 129px;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	display: flex;
+	flex-direction: column;
+}    
+.input-control {       
+	display: block;
+}    
+.submit-btn {        
+	margin-top: -130px;
+	margin-left: 100px;
+	font-size: 12px;
+}    
+#title {
+	position: absolute;
+	font-size: 13px;
+	margin-top: 15px;
+	margin-left: 35px;
+}
 }
