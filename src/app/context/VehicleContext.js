@@ -12,6 +12,8 @@ export const VehicleProvider = ({ children }) => {
     const [activeDel, setActiveDel] = useState()
     const [search, setSearch] = useState("")
     const [item, setItem] = useState()
+    
+    
     const returnList = () => {
         if (localStorage.getItem('vehicles') == null)
             localStorage.setItem('vehicles', JSON.stringify([]))
@@ -34,7 +36,7 @@ export const VehicleProvider = ({ children }) => {
             }
             else return list[currentIndex]
     }
-    const [formData, setFormData] = useState("")
+    const [formData, setFormData] = useState({})
     const [vehicles, setVehicles] = useState(returnStateObject)
     const onAddOrEdit = (data) => {
         let list = returnList();
@@ -50,6 +52,7 @@ export const VehicleProvider = ({ children }) => {
     }
     const submitForm = e => {
         e.preventDefault()
+        setFormData("")
         history.push('/user/vehicles/add');
     }
     const handleInputChange = (e) => {
@@ -85,7 +88,7 @@ export const VehicleProvider = ({ children }) => {
     }
     const handleDelete = (index) => {
         let list = returnList()
-        list.splice(index, 1);
+        list.splice(index, 1, {name: "null", id: index});
         localStorage.setItem('vehicles', JSON.stringify(list))
         setList (list)
         setCurrentIndex (-1)

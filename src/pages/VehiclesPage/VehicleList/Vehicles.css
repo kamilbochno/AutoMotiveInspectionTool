@@ -1,6 +1,6 @@
 .main-home {
-  position: absolute;
-	height: 400px;
+	position: inherit;
+	height: 100%;
 	width: 100%;
 	/* Firefox */
 	display: -moz-box;
@@ -16,7 +16,7 @@
 	box-align: center;
 }
 .vehicle-list {
-	margin:200px auto;
+	margin:130px auto;
 	width: 800px;
 	background-color: white;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
@@ -99,12 +99,12 @@ th {
 }
 .table {
 	table-layout: fixed;
-	width: 300px;
+	
 	border-collapse: collapse;
 	margin: 1px 0;
 	font-size: 0.9em;
 	font-family: sans-serif;
-	min-width: 400px;
+	min-width: 700px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	margin-left: 40px;
 	width: 700px;

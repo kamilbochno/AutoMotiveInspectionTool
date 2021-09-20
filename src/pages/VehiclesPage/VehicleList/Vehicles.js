@@ -9,6 +9,7 @@ const Vehicles = () => {
     let history = useHistory();
     console.log(list)
     return (
+		
 			<div className="main-home">
 				<div className="vehicle-list">
 					<h1>Vehicle list</h1>
@@ -34,16 +35,22 @@ const Vehicles = () => {
 								</thead>
 							</Table>
 						</div>
+							
 							{list.filter(({ name }) => name.toLowerCase().includes(search)).map((item, index) => {
 									const handleEdit = () => {
 											setCurrentIndex(index)
 											setFormData({
 												...formData,
-												id: item.id
+												id: item.id,
+												
 											})
 											history.push(`/vehicles/${item.id}`)
 											console.log(item.id)
 									}
+									if (item.name === "null") 
+									return (
+										null
+									)
 									return <Table className="map_table" responsive striped bordered hover horizontal key={index}>
 											<tbody>
 												<tr>

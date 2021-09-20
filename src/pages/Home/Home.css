@@ -1,6 +1,8 @@
 /*! CSS Used from: https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css */
 
-
+.header-style-2 {
+  max-height: 500px;
+}
 *,
 ::after,
 ::before {
