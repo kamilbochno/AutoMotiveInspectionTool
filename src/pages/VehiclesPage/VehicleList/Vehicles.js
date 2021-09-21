@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Link, useParams } from 'react-router-dom';
 import { useVehiclesContext } from '../../../app/context/VehicleContext';
 import { Table, Button } from 'react-bootstrap';
+import Search from "@material-ui/icons/Search";
 import './Vehicles.css';
 const Vehicles = () => {
     const { formData, list, onChange, search, submitForm, setCurrentIndex, currentIndex, setFormData, setItem } = useVehiclesContext()
@@ -16,10 +17,11 @@ const Vehicles = () => {
 						<div className="search-box">
 							<input 
 								type="text" 
-								placeholder="Search..." 
+								placeholder="Search by name" 
 								onChange={onChange} 
 								value={search}>
 							</input>
+							
 						</div>
 						<div className="Vehicles">
 						<div className="styled_table">
