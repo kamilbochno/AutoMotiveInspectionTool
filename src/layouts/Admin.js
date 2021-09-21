@@ -22,8 +22,7 @@ let ps;
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === "/user") {
-        return (
+        if (prop.layout === "/user") {return (
           <Route
             path={prop.layout + prop.path}
             component={prop.component}
@@ -31,9 +30,14 @@ const switchRoutes = (
           />
         );
       }
-      return null;
+      return (
+        <Route 
+          path={prop.path}
+          component={prop.component}
+          key={key}
+        />
+      )
     })}
-    <Redirect from="/user" to="/user/dashboard" />
   </Switch>
 );
 

@@ -15,21 +15,23 @@ import VehiclesDashboard from '../../pages/LoggedIn/Dashboard';
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardIcon from "components/Card/CardIcon.js";
-
+import Addvehicle from "../../pages/VehiclesPage/AddVehicle/AddVehicle";
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
   const classes = useStyles();
+  
   return (
     <div>
       <IdleTimerContainer/>
       <GridContainer>
         <GridItem>
-          <Card>
-            <Vehicles/>
-          </Card>
+          
+        <Vehicles/>
+            
+          
         </GridItem>
       </GridContainer>
     </div>

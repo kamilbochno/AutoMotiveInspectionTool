@@ -49,7 +49,7 @@ const Vehicle = () => {
 				</div>
 				
 			<Button className="del-btn" onClick={() => showDeleteModal(index)}>Delete</Button>
-			<Button className="del-btn" onClick={() => history.push(`/vehicles/${id}/edit`)}>Edit</Button>
+			<Button className="del-btn" onClick={() => history.push(`/${id}/edit`)}>Edit</Button>
 			</div>
 			<Delmodal show={showDelete} handleDelete={() => {
 				handleDelete(currentIndex)

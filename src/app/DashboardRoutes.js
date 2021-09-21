@@ -16,9 +16,10 @@ const DashboardRoutes = () => {
                 <ProtectedRoute exact path="/user/userprofile" component={Admin} />
                 <ProtectedRoute exact path="/user/repairs" component={Admin} />
                 <ProtectedRoute exact path="/user/notifications" component={Admin} />
-                <ProtectedRoute exact path="/user/vehicles/add" component={AddVehicle}/>
-                <Route exact path="/vehicles/:id" component={Vehicle} />
-                <ProtectedRoute exact path="/vehicles/:id/edit" component={EditVehicle} />
+                <ProtectedRoute exact path="/user/vehicles/add" component={Admin}/>
+                <ProtectedRoute exact path="/vehicles/add"/>
+                <ProtectedRoute exact path="/user/vehicles/:id" component={Admin} />
+                <ProtectedRoute exact path="/:id/edit" component={Admin} />
             </Switch>
         </div>
         </VehicleProvider>

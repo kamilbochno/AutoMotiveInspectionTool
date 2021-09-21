@@ -46,7 +46,7 @@ const Vehicles = () => {
 												id: item.id,
 												
 											})
-											history.push(`/vehicles/${item.id}`)
+											history.push(`/user/vehicles/${item.id}`)
 											console.log(item.id)
 									}
 									if (item.name === "null") 

@@ -56,7 +56,7 @@ export default function AdminNavbarLinks() {
 
     <div style={{marginRight: "40px"}}>
       <Button 
-        style={{backgroundColor: "orange", marginRight: "50px"}}
+        style={{backgroundColor: "orange",  marginRight: "20px"}}
         href="/user">
         Return to homepage
         </Button>

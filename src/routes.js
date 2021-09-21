@@ -25,6 +25,9 @@ import DashboardPage from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
 import Repairs from "views/Repairs/Repairs.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
+import AddVehicle from "../src/pages/VehiclesPage/AddVehicle/AddVehicle";
+import Vehicle from "../src/pages/VehiclesPage/Vehicle/Vehicle";
+import EditVehicle from "../src/pages/VehiclesPage/EditVehicle/EditVehicle";
 
 const dashboardRoutes = [
   {
@@ -33,6 +36,27 @@ const dashboardRoutes = [
     icon: Dashboard,
     component: DashboardPage,
     layout: "/user",
+  },
+  {
+    path: "/vehicles/add",
+    name: "Add Vehicle",
+    invisible: true,
+    component: AddVehicle,
+    layout: "/user",
+  },
+  {
+    path: "/vehicles/:id",
+    name: "sd",
+    invisible: true,
+    component: Vehicle,
+    layout: "/user",
+  },
+  {
+    path: "/:id/edit",
+    name: "Edit vehicle",
+    invisible: true,
+    component: EditVehicle,
+    layout: "",
   },
   {
     path: "/userprofile",
