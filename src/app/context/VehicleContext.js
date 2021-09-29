@@ -91,6 +91,7 @@ export const VehicleProvider = ({ children }) => {
         list.splice(index, 1, {name: "null", id: index});
         localStorage.setItem('vehicles', JSON.stringify(list))
         setList (list)
+        setFormData("")
         setCurrentIndex (-1)
         setShowDelete(false)
         history.push(`/user/dashboard`)

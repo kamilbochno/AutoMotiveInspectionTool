@@ -16,7 +16,7 @@
 	box-align: center;
 }
 .vehicle-list {
-	margin-left: 120px;
+	margin: 0px auto;
 	width: 800px;
 	background-color: white;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
@@ -26,11 +26,14 @@
 	overflow-y: hidden;
 } 
 .vehicles {
+	width: 780px;
 	height: 300px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+
 th {
+	
 	text-align: center;
 }
 .vehicle-list h2 {
@@ -43,6 +46,17 @@ th {
 .search-box input {
 	text-align: center;
 }
+.table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin: 1px 0;
+	font-size: 0.9em;
+	font-family: sans-serif;
+	min-width: 780px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	margin-left: 10px;
+	text-align: center;
+}
 .more {
 	background-color: #ed5217;
 	color: #fdf0eb;
@@ -53,6 +67,7 @@ th {
 	display: inline-block;
 	border: 1px solid #ed5217;
 	margin-top: -4px;
+	
 }
 .vehicles-btn {
 	position: inherit;
@@ -60,30 +75,76 @@ th {
 	margin-left: -20px;
 	margin-top: 50px;
 }
+
+.card_data {
+	margin-left: 250px;
+}
 @media only screen and (max-width: 1200px) {
 .vehicle-list {
-	margin: 130px auto;
+	margin: 0px auto;
 	width: 700px;
 	background-color: white;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 	height: 600px;
 } 
+.card_data {
+	margin-left: 200px;
+}
+.styled_table {
+	
+	min-width: 600px;
+}
+.table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin: 1px 0;
+	font-size: 0.9em;
+	font-family: sans-serif;
+	min-width: 680px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	margin-left: 10px;
+	text-align: center;
+}
+.vehicles {
+	width: 680px;
+}
 }
 @media only screen and (max-width: 768px) {
 .main-home {
-	position: absolute;
+	
 	width: 100%;
 }
-.vehicle-list {    
-	margin: 110px auto;
-	width: 80%;
+.more {
+	padding: 5px 10px;
+}
+.card_data {
+	margin-left: 50px;
+}
+.vehicle-list {   
+	margin: 0px auto;
+	width: 420px;
 	background-color: white;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 	height: 600px;
 } 
+.table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin: 1px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	font-family: sans-serif;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	margin-left: 10px;
+	text-align: center;
 }
+.vehicles {
+	width: 400px;
+}
+}
+
 .edit-btn {
 	margin-top: 10px;
 	margin-left: 10px;
@@ -95,31 +156,85 @@ th {
 	margin-right: 10px;
 }
 .styled_table{
-	width: 200px;
-}
-.table {
-	table-layout: fixed;
 	
-	border-collapse: collapse;
-	margin: 1px 0;
-	font-size: 0.9em;
-	font-family: sans-serif;
-	min-width: 700px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-	margin-left: 40px;
-	width: 700px;
-	text-align: center;
+	min-width: 300px;
 }
+
 .table thead tr {
-	font-size: 16px;
+	font-size: 14px;
 	background-color: #eb7d34;
 	color: white;
 }
 th {
-	width: 50px;
+	
 	overflow: hidden;
 }
 .table td {
 	font-size: 13px;
 }
-
+@media only screen and (max-width: 490px) {
+	.main-home {
+		
+		width: 100%;
+	}
+	
+	.card_data {
+		margin-left: 10px;
+	}
+	.vehicle-list {   
+		margin: 0px -26px;
+		width: 325px;
+		background-color: white;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		height: 600px;
+	} 
+	.table {
+		table-layout: fixed;
+		border-collapse: collapse;
+		margin: 1px 0;
+		font-size: 0.9em;
+		font-family: sans-serif;
+		min-width: 200px;
+		
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+		margin-left: 10px;
+		width: 100%;
+		text-align: center;
+	}
+	.vehicles {
+		width: 310px;
+	}
+	.more {
+		margin-left: -10px;
+		padding: 5px 5px;
+	}
+	}
+	
+	.edit-btn {
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.more-btn {
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.styled_table{
+		
+		width: 200px;
+	}
+	
+	.table thead tr {
+		font-size: 14px;
+		background-color: #eb7d34;
+		color: white;
+	}
+	th {
+		width: 50px;
+		overflow: hidden;
+	}
+	.table td {
+		font-size: 13px;
+	}

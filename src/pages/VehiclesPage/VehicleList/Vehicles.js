@@ -3,6 +3,9 @@ import { useHistory } from 'react-router-dom';
 import { Link, useParams } from 'react-router-dom';
 import { useVehiclesContext } from '../../../app/context/VehicleContext';
 import { Table, Button } from 'react-bootstrap';
+import Card from "components/Card/Card.js";
+import CardHeader from "components/Card/CardHeader.js";
+import CardBody from "components/Card/CardBody.js";
 import Search from "@material-ui/icons/Search";
 import './Vehicles.css';
 const Vehicles = () => {
@@ -37,7 +40,7 @@ const Vehicles = () => {
 								</thead>
 							</Table>
 						</div>
-							
+						
 							{list.filter(({ name }) => name.toLowerCase().includes(search)).map((item, index) => {
 									const handleEdit = () => {
 											setCurrentIndex(index)
@@ -49,14 +52,13 @@ const Vehicles = () => {
 											history.push(`/user/vehicles/${item.id}`)
 											console.log(item.id)
 									}
-									if (item.name === "null") 
+									if (item.name === 'null')
 									return (
 										null
-									)
-									return <Table className="map_table" responsive striped bordered hover horizontal key={index}>
+										)
+									return <Table responsive striped bordered hover horizontal key={index}>
 											<tbody>
 												<tr>
-													
 													<td className="id">{item.id}</td>
 													<td className="name">{item.name}</td>
 													<td className="model">{item.model}</td>
@@ -72,7 +74,7 @@ const Vehicles = () => {
 								</div>
 				</div>
 		</div>     
-  )
+)
 }
 
 export default Vehicles;

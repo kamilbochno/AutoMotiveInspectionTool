@@ -25,15 +25,7 @@ export default function Dashboard() {
   
   return (
     <div>
-      <IdleTimerContainer/>
-      <GridContainer>
-        <GridItem>
-          
         <Vehicles/>
-            
-          
-        </GridItem>
-      </GridContainer>
     </div>
   );
 }

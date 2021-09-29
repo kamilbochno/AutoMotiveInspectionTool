@@ -13,7 +13,7 @@ const Vehicle = () => {
 	const { isLoggedIn } = useAuthContext();
 	let history = useHistory();
 	console.log(showDelete)
-	if (list === null) {
+	if (list.name === null) {
 		return (
 				<p>Sorry, not found</p>
 		)
@@ -28,6 +28,7 @@ const Vehicle = () => {
 		<div className="Vehicle_main">
 			<div className="vehicle">
 				<div className="items">     
+					<div className="section1">
 					<h5>Brand: </h5> 
 					<h4>{list[id].name}</h4>
 					<h5>Model: </h5>
@@ -38,6 +39,8 @@ const Vehicle = () => {
 					<h5>{list[id].color}</h5>
 					<h6>Price: </h6>
 					<h5>{list[id].price} $</h5>
+					</div>
+					<div className="section2">
 					<h6>Body style: </h6>
 					<h5>{list[id].car_body}</h5>
 					<h6>Fuel type: </h6>
@@ -46,6 +49,7 @@ const Vehicle = () => {
 					<h5>{list[id].car_capacity}</h5>
 					<h6>Engine power: </h6>
 					<h5>{list[id].HP} HP</h5> 
+					</div>
 				</div>
 				
 			<Button className="del-btn" onClick={() => showDeleteModal(index)}>Delete</Button>
@@ -65,10 +69,10 @@ return (
 	<div className="Vehicle_main">
 			<div className="vehicle">
 				<div className="items">     
-					<h5>Brand: </h5> 
-					<h4>{list[id].name}</h4>
-					<h5>Model: </h5>
-					<h4>{list[id].model}</h4>
+					<h6>Brand: </h6> 
+					<h5>{list[id].name}</h5>
+					<h6>Model: </h6>
+					<h5>{list[id].model}</h5>
 					<h6>Year of production: </h6>
 					<h5>{list[id].year}</h5>
 					<h6>Color: </h6>

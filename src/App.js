@@ -4,6 +4,7 @@ import Layout from './app/Layout';
 import DashboardRoutes from 'app/DashboardRoutes';
 import { AuthProvider } from './app/context/AuthContext';
 import { useAuthContext } from './app/context/AuthContext';
+import IdleTimerContainer from 'pages/LoggedIn/components/IdleTimerContainer';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         </Layout>
         
       </AuthProvider>
+      
     </div>
   );
 }

@@ -11,7 +11,7 @@ const DashboardRoutes = () => {
     return (
         <VehicleProvider>
         <div className="Routes">
-            <Switch>
+            <Switch> 
                 <ProtectedRoute exact path="/user/dashboard" component={Admin} />
                 <ProtectedRoute exact path="/user/userprofile" component={Admin} />
                 <ProtectedRoute exact path="/user/repairs" component={Admin} />
